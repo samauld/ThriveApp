@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7977ACBE23E4EBEB005C841D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7977ACBD23E4EBEB005C841D /* AppDelegate.swift */; };
+		7977ACC023E4EBEB005C841D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7977ACBF23E4EBEB005C841D /* SceneDelegate.swift */; };
+		7977ACC223E4EBEB005C841D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7977ACC123E4EBEB005C841D /* ContentView.swift */; };
+		7977ACC423E4EBEC005C841D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7977ACC323E4EBEC005C841D /* Assets.xcassets */; };
+		7977ACC723E4EBEC005C841D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7977ACC623E4EBEC005C841D /* Preview Assets.xcassets */; };
+		7977ACCA23E4EBEC005C841D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7977ACC823E4EBEC005C841D /* LaunchScreen.storyboard */; };
+		7977ACD523E4EBEC005C841D /* ThriveAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7977ACD423E4EBEC005C841D /* ThriveAppTests.swift */; };
+		7977ACE023E4EC8B005C841D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7977ACDF23E4EC8B005C841D /* GoogleService-Info.plist */; };
+		CC459C97981E8BACBCA80D73 /* Pods_ThriveApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76777BE35210F49C2C551E7 /* Pods_ThriveApp.framework */; };
+		CF834A5717C64C5C034D3392 /* Pods_ThriveAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF5C97A77ADCE9878307E0B /* Pods_ThriveAppTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7977ACD123E4EBEC005C841D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7977ACB223E4EBEB005C841D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7977ACB923E4EBEB005C841D;
+			remoteInfo = ThriveApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3332ADE4573FA4275F8EF874 /* Pods-ThriveApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThriveApp.release.xcconfig"; path = "Target Support Files/Pods-ThriveApp/Pods-ThriveApp.release.xcconfig"; sourceTree = "<group>"; };
+		780925BFE68A53B88C924BE1 /* Pods-ThriveAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThriveAppTests.release.xcconfig"; path = "Target Support Files/Pods-ThriveAppTests/Pods-ThriveAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		7977ACBA23E4EBEB005C841D /* ThriveApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThriveApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7977ACBD23E4EBEB005C841D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7977ACBF23E4EBEB005C841D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7977ACC123E4EBEB005C841D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7977ACC323E4EBEC005C841D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7977ACC623E4EBEC005C841D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7977ACC923E4EBEC005C841D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7977ACCB23E4EBEC005C841D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7977ACD023E4EBEC005C841D /* ThriveAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThriveAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7977ACD423E4EBEC005C841D /* ThriveAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThriveAppTests.swift; sourceTree = "<group>"; };
+		7977ACD623E4EBEC005C841D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7977ACDF23E4EC8B005C841D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B76777BE35210F49C2C551E7 /* Pods_ThriveApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThriveApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD3EE797E3AA9ACC94890D0C /* Pods-ThriveAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThriveAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ThriveAppTests/Pods-ThriveAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D1DC2CAEF70D7C810E1CC369 /* Pods-ThriveApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThriveApp.debug.xcconfig"; path = "Target Support Files/Pods-ThriveApp/Pods-ThriveApp.debug.xcconfig"; sourceTree = "<group>"; };
+		DFF5C97A77ADCE9878307E0B /* Pods_ThriveAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThriveAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7977ACB723E4EBEB005C841D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC459C97981E8BACBCA80D73 /* Pods_ThriveApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7977ACCD23E4EBEC005C841D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF834A5717C64C5C034D3392 /* Pods_ThriveAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		192D8CF3EBD0303969ACA362 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B76777BE35210F49C2C551E7 /* Pods_ThriveApp.framework */,
+				DFF5C97A77ADCE9878307E0B /* Pods_ThriveAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B9A7AA64D9CD091840D9188 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1DC2CAEF70D7C810E1CC369 /* Pods-ThriveApp.debug.xcconfig */,
+				3332ADE4573FA4275F8EF874 /* Pods-ThriveApp.release.xcconfig */,
+				CD3EE797E3AA9ACC94890D0C /* Pods-ThriveAppTests.debug.xcconfig */,
+				780925BFE68A53B88C924BE1 /* Pods-ThriveAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7977ACB123E4EBEB005C841D = {
+			isa = PBXGroup;
+			children = (
+				7977ACBC23E4EBEB005C841D /* ThriveApp */,
+				7977ACD323E4EBEC005C841D /* ThriveAppTests */,
+				7977ACBB23E4EBEB005C841D /* Products */,
+				5B9A7AA64D9CD091840D9188 /* Pods */,
+				192D8CF3EBD0303969ACA362 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7977ACBB23E4EBEB005C841D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7977ACBA23E4EBEB005C841D /* ThriveApp.app */,
+				7977ACD023E4EBEC005C841D /* ThriveAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7977ACBC23E4EBEB005C841D /* ThriveApp */ = {
+			isa = PBXGroup;
+			children = (
+				7977ACBD23E4EBEB005C841D /* AppDelegate.swift */,
+				7977ACBF23E4EBEB005C841D /* SceneDelegate.swift */,
+				7977ACC123E4EBEB005C841D /* ContentView.swift */,
+				7977ACC323E4EBEC005C841D /* Assets.xcassets */,
+				7977ACC823E4EBEC005C841D /* LaunchScreen.storyboard */,
+				7977ACCB23E4EBEC005C841D /* Info.plist */,
+				7977ACDF23E4EC8B005C841D /* GoogleService-Info.plist */,
+				7977ACC523E4EBEC005C841D /* Preview Content */,
+			);
+			path = ThriveApp;
+			sourceTree = "<group>";
+		};
+		7977ACC523E4EBEC005C841D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7977ACC623E4EBEC005C841D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7977ACD323E4EBEC005C841D /* ThriveAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				7977ACD423E4EBEC005C841D /* ThriveAppTests.swift */,
+				7977ACD623E4EBEC005C841D /* Info.plist */,
+			);
+			path = ThriveAppTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7977ACB923E4EBEB005C841D /* ThriveApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7977ACD923E4EBEC005C841D /* Build configuration list for PBXNativeTarget "ThriveApp" */;
+			buildPhases = (
+				AF46E7937F937B9255CD9EE0 /* [CP] Check Pods Manifest.lock */,
+				7977ACB623E4EBEB005C841D /* Sources */,
+				7977ACB723E4EBEB005C841D /* Frameworks */,
+				7977ACB823E4EBEB005C841D /* Resources */,
+				FAA3EB298BFF9A298875D279 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ThriveApp;
+			productName = ThriveApp;
+			productReference = 7977ACBA23E4EBEB005C841D /* ThriveApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7977ACCF23E4EBEC005C841D /* ThriveAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7977ACDC23E4EBEC005C841D /* Build configuration list for PBXNativeTarget "ThriveAppTests" */;
+			buildPhases = (
+				29D3563A1C634479045FE8DF /* [CP] Check Pods Manifest.lock */,
+				7977ACCC23E4EBEC005C841D /* Sources */,
+				7977ACCD23E4EBEC005C841D /* Frameworks */,
+				7977ACCE23E4EBEC005C841D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7977ACD223E4EBEC005C841D /* PBXTargetDependency */,
+			);
+			name = ThriveAppTests;
+			productName = ThriveAppTests;
+			productReference = 7977ACD023E4EBEC005C841D /* ThriveAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7977ACB223E4EBEB005C841D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Katherine Griffin";
+				TargetAttributes = {
+					7977ACB923E4EBEB005C841D = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					7977ACCF23E4EBEC005C841D = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 7977ACB923E4EBEB005C841D;
+					};
+				};
+			};
+			buildConfigurationList = 7977ACB523E4EBEB005C841D /* Build configuration list for PBXProject "ThriveApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7977ACB123E4EBEB005C841D;
+			productRefGroup = 7977ACBB23E4EBEB005C841D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7977ACB923E4EBEB005C841D /* ThriveApp */,
+				7977ACCF23E4EBEC005C841D /* ThriveAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7977ACB823E4EBEB005C841D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7977ACCA23E4EBEC005C841D /* LaunchScreen.storyboard in Resources */,
+				7977ACE023E4EC8B005C841D /* GoogleService-Info.plist in Resources */,
+				7977ACC723E4EBEC005C841D /* Preview Assets.xcassets in Resources */,
+				7977ACC423E4EBEC005C841D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7977ACCE23E4EBEC005C841D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29D3563A1C634479045FE8DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ThriveAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF46E7937F937B9255CD9EE0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ThriveApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAA3EB298BFF9A298875D279 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ThriveApp/Pods-ThriveApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ThriveApp/Pods-ThriveApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ThriveApp/Pods-ThriveApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7977ACB623E4EBEB005C841D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7977ACBE23E4EBEB005C841D /* AppDelegate.swift in Sources */,
+				7977ACC023E4EBEB005C841D /* SceneDelegate.swift in Sources */,
+				7977ACC223E4EBEB005C841D /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7977ACCC23E4EBEC005C841D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7977ACD523E4EBEC005C841D /* ThriveAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7977ACD223E4EBEC005C841D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7977ACB923E4EBEB005C841D /* ThriveApp */;
+			targetProxy = 7977ACD123E4EBEC005C841D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7977ACC823E4EBEC005C841D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7977ACC923E4EBEC005C841D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7977ACD723E4EBEC005C841D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7977ACD823E4EBEC005C841D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7977ACDA23E4EBEC005C841D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1DC2CAEF70D7C810E1CC369 /* Pods-ThriveApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"ThriveApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ThriveApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.application.ThriveApp.ThriveApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7977ACDB23E4EBEC005C841D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3332ADE4573FA4275F8EF874 /* Pods-ThriveApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"ThriveApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ThriveApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.application.ThriveApp.ThriveApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7977ACDD23E4EBEC005C841D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD3EE797E3AA9ACC94890D0C /* Pods-ThriveAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ThriveAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.application.ThriveApp.ThriveAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThriveApp.app/ThriveApp";
+			};
+			name = Debug;
+		};
+		7977ACDE23E4EBEC005C841D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 780925BFE68A53B88C924BE1 /* Pods-ThriveAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ThriveAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.application.ThriveApp.ThriveAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThriveApp.app/ThriveApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7977ACB523E4EBEB005C841D /* Build configuration list for PBXProject "ThriveApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7977ACD723E4EBEC005C841D /* Debug */,
+				7977ACD823E4EBEC005C841D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7977ACD923E4EBEC005C841D /* Build configuration list for PBXNativeTarget "ThriveApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7977ACDA23E4EBEC005C841D /* Debug */,
+				7977ACDB23E4EBEC005C841D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7977ACDC23E4EBEC005C841D /* Build configuration list for PBXNativeTarget "ThriveAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7977ACDD23E4EBEC005C841D /* Debug */,
+				7977ACDE23E4EBEC005C841D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7977ACB223E4EBEB005C841D /* Project object */;
+}
