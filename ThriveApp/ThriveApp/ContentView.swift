@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        NavigationView {
         VStack {
         Text("Thrive")
             .font(.largeTitle)
@@ -18,23 +19,26 @@ struct ContentView: View {
         Text("Thriving on the Spectrum")
             .font(.title)
                 .padding(5)
-        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+        NavigationLink(destination: SignInView() ) {
             Text("Sign In")
             .foregroundColor(.blue)
             .font(.title)
             .padding()
             .border(Color.blue, width: 5)
-            }.padding()
-        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+        }.padding()
+        NavigationLink(destination: SignUpView()) {
             Text("Sign Up")
-                .foregroundColor(.blue)
-                .font(.title)
-                .padding()
-                .border(Color.blue, width: 5)
+            .foregroundColor(.blue)
+            .font(.title)
+            .padding()
+            .border(Color.blue, width: 5)
+        }
         }
         }
     }
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
