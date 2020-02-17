@@ -9,10 +9,35 @@
 import SwiftUI
 
 struct SignInView: View {
+    
+    @State private var username: String = ""
+    @State private var password: String = ""
+
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text("Sign In")
+                .font(.title)
+                .padding()
+            TextField("Username", text: $username)
+                .padding(.all)
+                .frame(width: 300)
+            SecureField("Password", text: $password)
+                .padding(.all)
+                .frame(width: 300)
+            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                Text("Sign In")
+                .foregroundColor(.blue)
+                .font(.title)
+                .padding()
+                .border(Color.blue, width: 5)
+            }
+        }
+        
     }
 }
+
+
 
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
