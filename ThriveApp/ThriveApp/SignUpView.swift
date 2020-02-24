@@ -9,8 +9,30 @@
 import SwiftUI
 
 struct SignUpView: View {
+    
+    @State private var email: String = ""
+    @State private var password: String = ""
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text("Sign Up")
+                .font(.title)
+                .padding()
+            TextField("Email", text: $email)
+                .padding(.all)
+                .frame(width: 300)
+            SecureField("Password", text: $password)
+                .padding(.all)
+                .frame(width: 300)
+            Button(action: {signUpAuthentication(email: self.email, password: self.password)}) {
+                Text("Create account")
+                .foregroundColor(.blue)
+                .font(.title)
+                .padding()
+                .border(Color.blue, width: 5)
+            }
+        }
+        
     }
 }
 
