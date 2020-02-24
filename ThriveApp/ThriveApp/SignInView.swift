@@ -25,7 +25,7 @@ struct SignInView: View {
             SecureField("Password", text: $password)
                 .padding(.all)
                 .frame(width: 300)
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+            Button(action: {signInAuthentication(email: self.username, password: self.password)}) {
                 Text("Sign In")
                 .foregroundColor(.blue)
                 .font(.title)
