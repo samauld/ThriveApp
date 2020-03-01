@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		219563F9240C734600A0C8CD /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219563F8240C734600A0C8CD /* ScheduleView.swift */; };
 		7971B0D523FA11AC0018201F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971B0D423FA11AC0018201F /* SignUpView.swift */; };
 		7971B0D723FA13A60018201F /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971B0D623FA13A60018201F /* SignInView.swift */; };
 		7971B0D9240434260018201F /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971B0D8240434260018201F /* SignInController.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		219563F8240C734600A0C8CD /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		3332ADE4573FA4275F8EF874 /* Pods-ThriveApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThriveApp.release.xcconfig"; path = "Target Support Files/Pods-ThriveApp/Pods-ThriveApp.release.xcconfig"; sourceTree = "<group>"; };
 		780925BFE68A53B88C924BE1 /* Pods-ThriveAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThriveAppTests.release.xcconfig"; path = "Target Support Files/Pods-ThriveAppTests/Pods-ThriveAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		7971B0D423FA11AC0018201F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				7971B0D423FA11AC0018201F /* SignUpView.swift */,
 				7971B0D623FA13A60018201F /* SignInView.swift */,
 				7971B0D8240434260018201F /* SignInController.swift */,
+				219563F8240C734600A0C8CD /* ScheduleView.swift */,
 			);
 			path = ThriveApp;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				7971B0D523FA11AC0018201F /* SignUpView.swift in Sources */,
 				7977ACBE23E4EBEB005C841D /* AppDelegate.swift in Sources */,
 				7977ACC023E4EBEB005C841D /* SceneDelegate.swift in Sources */,
+				219563F9240C734600A0C8CD /* ScheduleView.swift in Sources */,
 				7971B0D9240434260018201F /* SignInController.swift in Sources */,
 				7977ACC223E4EBEB005C841D /* ContentView.swift in Sources */,
 				7971B0D723FA13A60018201F /* SignInView.swift in Sources */,
