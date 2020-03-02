@@ -17,12 +17,17 @@ struct ScheduleView: View {
     
     var body: some View {
         VStack{
+            Text("Child Name's Schedule")
+            .font(.title)
+            .padding()
             Button(action: {signInAuthentication(email: self.username, password: self.password)}) {
                 Text("Monday 3/2")
                 .foregroundColor(.blue)
                 .font(.title)
-                .padding()
+                    .multilineTextAlignment(.leading)
+                    .padding()
                 .border(Color.blue, width: 5)
+                    .frame(width: 300, height: 80)
             }
             Button(action: {signInAuthentication(email: self.username, password: self.password)}) {
                 Text("Tuesday 3/3")
@@ -30,6 +35,7 @@ struct ScheduleView: View {
                 .font(.title)
                 .padding()
                 .border(Color.blue, width: 5)
+                .frame(width: 300, height: 80)
             }
             Button(action: {signInAuthentication(email: self.username, password: self.password)}) {
                 Text("Wednesday 3/4")
@@ -37,6 +43,7 @@ struct ScheduleView: View {
                 .font(.title)
                 .padding()
                 .border(Color.blue, width: 5)
+                .frame(width: 300, height: 80)
             }
             Button(action: {signInAuthentication(email: self.username, password: self.password)}) {
                 Text("Thursday 3/5")
@@ -44,6 +51,7 @@ struct ScheduleView: View {
                 .font(.title)
                 .padding()
                 .border(Color.blue, width: 5)
+                .frame(width: 300, height: 80)
             }
             Button(action: {signInAuthentication(email: self.username, password: self.password)}) {
                 Text("Friday 3/6")
@@ -51,6 +59,7 @@ struct ScheduleView: View {
                 .font(.title)
                 .padding()
                 .border(Color.blue, width: 5)
+                .frame(width: 300, height: 80)
             }
             Button(action: {signInAuthentication(email: self.username, password: self.password)}) {
                 Text("Saturday 3/7")
@@ -58,6 +67,7 @@ struct ScheduleView: View {
                 .font(.title)
                 .padding()
                 .border(Color.blue, width: 5)
+                .frame(width: 300, height: 80)
             }
             Button(action: {signInAuthentication(email: self.username, password: self.password)}) {
                 Text("Sunday 3/8")
@@ -65,6 +75,7 @@ struct ScheduleView: View {
                 .font(.title)
                 .padding()
                 .border(Color.blue, width: 5)
+                .frame(width: 300, height: 80)
             }
                                                                     }
         
