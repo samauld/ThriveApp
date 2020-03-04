@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct SwiftUIView: View {
+struct ChildProfileView: View {
     var body: some View {
         
         VStack {
@@ -19,28 +19,84 @@ struct SwiftUIView: View {
                     .foregroundColor(.blue)
                     .font(.title)
                     .padding(8)
-                    .border(Color.blue, width: 4)
                 }
                 Text("Adam's Profile")
-                .font(Font.system(size: 30, design: .default))
+                    .font(Font.system(size: 30, design: .default))
             }
-            
-            HStack {
-                Button(action: {}) {
-                    Text("Hello")
+            Divider()
+            HStack(spacing: 50) {
+                VStack {
+                    
+                    Image("blankimg").resizable()
+                    .frame(width: 130.0, height: 130.0)
+                    .clipShape(Circle())
+                    Button(action: {}) {
+                        Text("Messages")
+                    }
                 }
-                Image("blankimg").resizable()
-                .frame(width: 130.0, height: 130.0)
-                .clipShape(Circle())
+                
+                VStack {
+                    
+                    Image("blankimg").resizable()
+                    .frame(width: 130.0, height: 130.0)
+                    .clipShape(Circle())
+                    Button(action: {}) {
+                        Text("Notifications")
+                    }
+                }
             }
-            
+            .padding(.top)
+            HStack(spacing: 50) {
+                VStack {
+                    
+                    Image("blankimg").resizable()
+                    .frame(width: 130.0, height: 130.0)
+                    .clipShape(Circle())
+                    Button(action: {}) {
+                        Text("Schedule")
+                    }
+                }
+                VStack {
+                    
+                    Image("blankimg").resizable()
+                    .frame(width: 130.0, height: 130.0)
+                    .clipShape(Circle())
+                    Button(action: {}) {
+                        Text("Regulation Toolbox")
+                    }
+                }
+            }
+            .padding(.top)
+            HStack(spacing: 50) {
+                VStack {
+                    
+                    Image("blankimg").resizable()
+                    .frame(width: 130.0, height: 130.0)
+                    .clipShape(Circle())
+                    Button(action: {}) {
+                        Text("Reward Bank")
+                    }
+                }
+                VStack {
+                    
+                    Image("blankimg").resizable()
+                    .frame(width: 130.0, height: 130.0)
+                    .clipShape(Circle())
+                    Button(action: {}) {
+                        Text("Geofences")
+                    }
+                }
+            }
+            .padding(.top)
+            Spacer()
+
             
         }
     }
 }
 
-struct SwiftUIView_Previews: PreviewProvider {
+struct ChildProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        SwiftUIView()
+        ChildProfileView()
     }
 }
