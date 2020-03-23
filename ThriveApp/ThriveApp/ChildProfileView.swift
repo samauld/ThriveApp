@@ -89,7 +89,13 @@ struct ChildProfileView: View {
             }
             .padding(.top)
             Spacer()
-
+            Button(action: {signOut()}) {
+                Text("Sign Out")
+                .foregroundColor(.blue)
+                .font(.title)
+                .padding()
+                .border(Color.blue, width: 5)
+            }
             
         }
     }

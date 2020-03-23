@@ -21,3 +21,14 @@ func signInAuthentication(email: String, password: String) {
         print("worked");
     }
 }
+
+func signOut(){
+    let firebaseAuth = Auth.auth();
+    do {
+      try firebaseAuth.signOut()
+    } catch let signOutError as NSError {
+      print ("Error signing out: %@", signOutError)
+    }
+      
+}
+
