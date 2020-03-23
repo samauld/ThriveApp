@@ -10,6 +10,7 @@
 		7971B0D523FA11AC0018201F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971B0D423FA11AC0018201F /* SignUpView.swift */; };
 		7971B0D723FA13A60018201F /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971B0D623FA13A60018201F /* SignInView.swift */; };
 		7971B0D9240434260018201F /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971B0D8240434260018201F /* SignInController.swift */; };
+		797324972428357E00F7F36A /* ParentCommunicationPortal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797324962428357D00F7F36A /* ParentCommunicationPortal.swift */; };
 		7977ACBE23E4EBEB005C841D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7977ACBD23E4EBEB005C841D /* AppDelegate.swift */; };
 		7977ACC023E4EBEB005C841D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7977ACBF23E4EBEB005C841D /* SceneDelegate.swift */; };
 		7977ACC223E4EBEB005C841D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7977ACC123E4EBEB005C841D /* ContentView.swift */; };
@@ -39,6 +40,7 @@
 		7971B0D423FA11AC0018201F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		7971B0D623FA13A60018201F /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		7971B0D8240434260018201F /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
+		797324962428357D00F7F36A /* ParentCommunicationPortal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentCommunicationPortal.swift; sourceTree = "<group>"; };
 		7977ACBA23E4EBEB005C841D /* ThriveApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThriveApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7977ACBD23E4EBEB005C841D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7977ACBF23E4EBEB005C841D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				7971B0D623FA13A60018201F /* SignInView.swift */,
 				7971B0D8240434260018201F /* SignInController.swift */,
 				A1DE6F50240CC10000196CD9 /* ChildProfileView.swift */,
+				797324962428357D00F7F36A /* ParentCommunicationPortal.swift */,
 			);
 			path = ThriveApp;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				A1DE6F51240CC10000196CD9 /* ChildProfileView.swift in Sources */,
 				7977ACBE23E4EBEB005C841D /* AppDelegate.swift in Sources */,
 				7977ACC023E4EBEB005C841D /* SceneDelegate.swift in Sources */,
+				797324972428357E00F7F36A /* ParentCommunicationPortal.swift in Sources */,
 				7971B0D9240434260018201F /* SignInController.swift in Sources */,
 				7977ACC223E4EBEB005C841D /* ContentView.swift in Sources */,
 				7971B0D723FA13A60018201F /* SignInView.swift in Sources */,

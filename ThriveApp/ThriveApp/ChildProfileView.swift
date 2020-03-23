@@ -10,9 +10,8 @@ import SwiftUI
 
 struct ChildProfileView: View {
     var body: some View {
-        
+        NavigationView{
         VStack {
-            
             HStack {
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
                     Text("<")
@@ -25,14 +24,16 @@ struct ChildProfileView: View {
             }
             Divider()
             HStack(spacing: 50) {
+                
                 VStack {
                     
                     Image("blankimg").resizable()
                     .frame(width: 130.0, height: 130.0)
                     .clipShape(Circle())
-                    Button(action: {}) {
+                    NavigationLink(destination: ParentCommunicationPortal()) {
                         Text("Messages")
                     }
+                    
                 }
                 
                 VStack {
@@ -96,8 +97,8 @@ struct ChildProfileView: View {
                 .padding()
                 .border(Color.blue, width: 5)
             }
-            
         }
+    }
     }
 }
 
