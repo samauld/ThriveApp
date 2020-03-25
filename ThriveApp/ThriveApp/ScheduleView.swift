@@ -15,16 +15,12 @@ struct ScheduleView: View {
 
     
     var body: some View {
-        NavigationView{
         VStack{
-            Text("Child Name's Schedule")
-            .font(.title)
-            .padding()
             NavigationLink(destination: ScheduleDayView()) {
                 Text("Monday 3/2")
                 .foregroundColor(.blue)
                 .font(.title)
-                    .multilineTextAlignment(.leading)
+                .multilineTextAlignment(.leading)
                     .padding()
                 .border(Color.blue, width: 5)
                     .frame(width: 300, height: 80)
@@ -77,7 +73,8 @@ struct ScheduleView: View {
                 .border(Color.blue, width: 5)
                 .frame(width: 300, height: 80)
             }
-            }                                                           }
+            .navigationBarTitle(Text("Adam's Schedule"), displayMode: .inline)
+            }                                                           
         
     }
 }

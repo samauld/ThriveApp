@@ -10,19 +10,8 @@ import SwiftUI
 
 struct ChildProfileView: View {
     var body: some View {
-        NavigationView{
+        NavigationView {
         VStack {
-            HStack {
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                    Text("<")
-                    .foregroundColor(.blue)
-                    .font(.title)
-                    .padding(8)
-                }
-                Text("Adam's Profile")
-                    .font(Font.system(size: 30, design: .default))
-            }
-            Divider()
             HStack(spacing: 50) {
                 
                 VStack {
@@ -97,6 +86,7 @@ struct ChildProfileView: View {
                 .padding()
                 .border(Color.blue, width: 5)
             }
+            .navigationBarTitle(Text("Adam's Profile"), displayMode: .inline)
         }
     }
     }
