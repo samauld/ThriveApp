@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		761CDAC924305BBA0057A736 /* ToolboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761CDAC824305BBA0057A736 /* ToolboxView.swift */; };
 		7971B0D523FA11AC0018201F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971B0D423FA11AC0018201F /* SignUpView.swift */; };
 		7971B0D723FA13A60018201F /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971B0D623FA13A60018201F /* SignInView.swift */; };
 		7971B0D9240434260018201F /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971B0D8240434260018201F /* SignInController.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		3332ADE4573FA4275F8EF874 /* Pods-ThriveApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThriveApp.release.xcconfig"; path = "Target Support Files/Pods-ThriveApp/Pods-ThriveApp.release.xcconfig"; sourceTree = "<group>"; };
+		761CDAC824305BBA0057A736 /* ToolboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolboxView.swift; sourceTree = "<group>"; };
 		780925BFE68A53B88C924BE1 /* Pods-ThriveAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThriveAppTests.release.xcconfig"; path = "Target Support Files/Pods-ThriveAppTests/Pods-ThriveAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		7971B0D423FA11AC0018201F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		7971B0D623FA13A60018201F /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				7971B0D8240434260018201F /* SignInController.swift */,
 				A1DE6F50240CC10000196CD9 /* ChildProfileView.swift */,
 				797324962428357D00F7F36A /* ParentCommunicationPortal.swift */,
+				761CDAC824305BBA0057A736 /* ToolboxView.swift */,
 			);
 			path = ThriveApp;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				7971B0D523FA11AC0018201F /* SignUpView.swift in Sources */,
 				A1DE6F51240CC10000196CD9 /* ChildProfileView.swift in Sources */,
 				7977ACBE23E4EBEB005C841D /* AppDelegate.swift in Sources */,
+				761CDAC924305BBA0057A736 /* ToolboxView.swift in Sources */,
 				7977ACC023E4EBEB005C841D /* SceneDelegate.swift in Sources */,
 				797324972428357E00F7F36A /* ParentCommunicationPortal.swift in Sources */,
 				7973249B242912A100F7F36A /* ScheduleView.swift in Sources */,
