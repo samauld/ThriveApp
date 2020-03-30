@@ -7,24 +7,29 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct ParentCommunicationPortal: View {
     
     @State private var post: String = ""
-    @State private var posts = [String]()
+    @State private var posts = [Post]()
+    @State private var user = Auth.auth().currentUser;
     
     func appendPost(str: String){
-        posts.append(str)
+        let date = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        let minutes = calendar.component(.minute, from: date)
+        let month = calendar.component(.month, from: date)
+        let day = calendar.component(.day, from: date)
+        let year = calendar.component(.year, from: date)
+        
+        let p = Post(image: "mojave",
+        content: str,
+        time: "\(month)/\(day)/\(year) \(hour):\(minutes)")
+        
+        posts.append(p)
         post=""
-    }
-    
-    func getPosts() -> String{
-        if posts.count == 0{
-            return "No posts"
-        }
-        else {
-            return posts[posts.count-1]
-        }
     }
     
     var body: some View {
@@ -33,7 +38,12 @@ struct ParentCommunicationPortal: View {
                 Text("Recent Posts")
                     .fontWeight(.semibold)
                 .padding(5)
-                Text(getPosts())
+                List {
+                        // loop through all the posts and create a post view for each item
+                        ForEach(posts) { post in
+                           PostView(post: post)
+                        }
+                    }
                 Spacer()
                 TextField("Update here", text: $post)
                     .padding()

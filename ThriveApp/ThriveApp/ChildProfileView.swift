@@ -63,7 +63,7 @@ struct ChildProfileView: View {
                     Image("blankimg").resizable()
                     .frame(width: 130.0, height: 130.0)
                     .clipShape(Circle())
-                    Button(action: {}) {
+                    NavigationLink(destination: RewardBankView()) {
                         Text("Reward Bank")
                     }
                 }
