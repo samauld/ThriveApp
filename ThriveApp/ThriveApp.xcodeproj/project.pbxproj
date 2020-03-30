@@ -23,6 +23,7 @@
 		7977ACCA23E4EBEC005C841D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7977ACC823E4EBEC005C841D /* LaunchScreen.storyboard */; };
 		7977ACD523E4EBEC005C841D /* ThriveAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7977ACD423E4EBEC005C841D /* ThriveAppTests.swift */; };
 		7977ACE023E4EC8B005C841D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7977ACDF23E4EC8B005C841D /* GoogleService-Info.plist */; };
+		A134E3FE243243E500A019F4 /* RewardBankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A134E3FD243243E500A019F4 /* RewardBankView.swift */; };
 		A1DE6F51240CC10000196CD9 /* ChildProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DE6F50240CC10000196CD9 /* ChildProfileView.swift */; };
 		CC459C97981E8BACBCA80D73 /* Pods_ThriveApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76777BE35210F49C2C551E7 /* Pods_ThriveApp.framework */; };
 		CF834A5717C64C5C034D3392 /* Pods_ThriveAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF5C97A77ADCE9878307E0B /* Pods_ThriveAppTests.framework */; };
@@ -61,6 +62,7 @@
 		7977ACD423E4EBEC005C841D /* ThriveAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThriveAppTests.swift; sourceTree = "<group>"; };
 		7977ACD623E4EBEC005C841D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7977ACDF23E4EC8B005C841D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A134E3FD243243E500A019F4 /* RewardBankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardBankView.swift; sourceTree = "<group>"; };
 		A1DE6F50240CC10000196CD9 /* ChildProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileView.swift; sourceTree = "<group>"; };
 		B76777BE35210F49C2C551E7 /* Pods_ThriveApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThriveApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3EE797E3AA9ACC94890D0C /* Pods-ThriveAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThriveAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ThriveAppTests/Pods-ThriveAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				797324962428357D00F7F36A /* ParentCommunicationPortal.swift */,
 				7972A4FF243218AA00AD7869 /* PostView.swift */,
 				7972A501243218F400AD7869 /* Post.swift */,
+				A134E3FD243243E500A019F4 /* RewardBankView.swift */,
 			);
 			path = ThriveApp;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7971B0D523FA11AC0018201F /* SignUpView.swift in Sources */,
+				A134E3FE243243E500A019F4 /* RewardBankView.swift in Sources */,
 				A1DE6F51240CC10000196CD9 /* ChildProfileView.swift in Sources */,
 				7977ACBE23E4EBEB005C841D /* AppDelegate.swift in Sources */,
 				7972A502243218F400AD7869 /* Post.swift in Sources */,
