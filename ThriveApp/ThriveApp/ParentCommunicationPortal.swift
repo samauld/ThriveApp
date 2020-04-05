@@ -19,16 +19,36 @@ struct ParentCommunicationPortal: View {
     let db = Firestore.firestore()
     
     func readPosts(){
-        db.collection("profiles").document(user?.uid ?? "").collection("portal").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                print(querySnapshot!.documents)
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
-                }
+//        db.collection("profiles").document(user?.uid ?? "").collection("portal").getDocuments() { (querySnapshot, err) in
+//            if let err = err {
+//                print("Error getting documents: \(err)")
+//            } else {
+//                print(querySnapshot!.documents)
+//                print("after query")
+//                for document in querySnapshot!.documents {
+//                    print("\(document.documentID) => \(document.data())")
+//                }
+//            }
+//        }
+        print (user?.uid)
+
+//        db.collection("profiles").getDocuments() { (querySnapshot, err) in
+//            if let err = err {
+//                print("Error getting documents: \(err)")
+//            } else {
+//                for document in querySnapshot!.documents {
+//                    print("\(document.documentID) => \(document.data())")
+//                }
+//            }
+//        }
+        db.collection("profiles").document(user?.uid ?? "").getDocument()  { (document, error) in
+            if let document = document {
+                let group_array = document[self.user?.uid ?? ""] as? Array ?? [""]
+                print(group_array)
             }
+
         }
+
         
     }
     
