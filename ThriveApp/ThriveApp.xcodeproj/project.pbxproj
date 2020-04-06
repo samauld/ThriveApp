@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		761CDAC924305BBA0057A736 /* ToolboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761CDAC824305BBA0057A736 /* ToolboxView.swift */; };
+		761CDACB243AEFAE0057A736 /* ToolDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761CDACA243AEFAE0057A736 /* ToolDetailView.swift */; };
 		79430E98243AD855009ED9BF /* ScheduleCal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79430E97243AD855009ED9BF /* ScheduleCal.swift */; };
 		79430E9C243B6E67009ED9BF /* Manager in Resources */ = {isa = PBXBuildFile; fileRef = 79430E9B243B6E67009ED9BF /* Manager */; };
 		79430E9E243B6EAE009ED9BF /* RKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79430E9D243B6EAE009ED9BF /* RKManager.swift */; };
@@ -52,6 +53,7 @@
 /* Begin PBXFileReference section */
 		3332ADE4573FA4275F8EF874 /* Pods-ThriveApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThriveApp.release.xcconfig"; path = "Target Support Files/Pods-ThriveApp/Pods-ThriveApp.release.xcconfig"; sourceTree = "<group>"; };
 		761CDAC824305BBA0057A736 /* ToolboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolboxView.swift; sourceTree = "<group>"; };
+		761CDACA243AEFAE0057A736 /* ToolDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolDetailView.swift; sourceTree = "<group>"; };
 		780925BFE68A53B88C924BE1 /* Pods-ThriveAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThriveAppTests.release.xcconfig"; path = "Target Support Files/Pods-ThriveAppTests/Pods-ThriveAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		79430E97243AD855009ED9BF /* ScheduleCal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCal.swift; sourceTree = "<group>"; };
 		79430E9B243B6E67009ED9BF /* Manager */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Manager; sourceTree = "<group>"; };
@@ -176,10 +178,11 @@
 				7971B0D8240434260018201F /* SignInController.swift */,
 				A1DE6F50240CC10000196CD9 /* ChildProfileView.swift */,
 				797324962428357D00F7F36A /* ParentCommunicationPortal.swift */,
-				761CDAC824305BBA0057A736 /* ToolboxView.swift */,
 				7972A4FF243218AA00AD7869 /* PostView.swift */,
 				7972A501243218F400AD7869 /* Post.swift */,
 				A134E3FD243243E500A019F4 /* RewardBankView.swift */,
+				761CDAC824305BBA0057A736 /* ToolboxView.swift */,
+				761CDACA243AEFAE0057A736 /* ToolDetailView.swift */,
 				79430E97243AD855009ED9BF /* ScheduleCal.swift */,
 			);
 			path = ThriveApp;
@@ -378,6 +381,7 @@
 			files = (
 				7971B0D523FA11AC0018201F /* SignUpView.swift in Sources */,
 				A134E3FE243243E500A019F4 /* RewardBankView.swift in Sources */,
+				761CDACB243AEFAE0057A736 /* ToolDetailView.swift in Sources */,
 				79430E9E243B6EAE009ED9BF /* RKManager.swift in Sources */,
 				A1DE6F51240CC10000196CD9 /* ChildProfileView.swift in Sources */,
 				7977ACBE23E4EBEB005C841D /* AppDelegate.swift in Sources */,
