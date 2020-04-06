@@ -28,12 +28,13 @@ struct RKMonth: View {
     
     var body: some View {
         VStack(alignment: HorizontalAlignment.center, spacing: 10){
-            Text(getMonthHeader()).foregroundColor(self.rkManager.colors.monthHeaderColor)
+            Text(getMonthHeader()).foregroundColor(self.rkManager.colors.monthHeaderColor).fontWeight(.bold).font(.title)
             VStack(alignment: .leading, spacing: 5) {
                 ForEach(monthsArray, id:  \.self) { row in
                     HStack() {
                         ForEach(row, id:  \.self) { column in
                             HStack() {
+                                Spacer()
                                 Spacer()
                                 if self.isThisMonth(date: column) {
                                     RKCell(rkDate: RKDate(

@@ -10,7 +10,6 @@ import SwiftUI
 
 struct ToolDetailView: View {
     var body: some View {
-        NavigationView(){
             VStack {
                 Image("toolbox").resizable()
                 .frame(width: 250, height: 250)
@@ -50,7 +49,6 @@ struct ToolDetailView: View {
                 .padding(.top)
             }
         .navigationBarTitle(Text("Tool Name"))
-        }
     }
 }
 

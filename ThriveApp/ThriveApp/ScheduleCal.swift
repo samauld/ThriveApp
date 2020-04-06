@@ -21,6 +21,10 @@ struct ScheduleCal : View {
     var body: some View {
         NavigationView{
         VStack (spacing: 25) {
+            Image("scheduler").resizable()
+            .frame(width: 200, height: 200)
+                .offset(y: -70)
+            Text("Adam's Schedule").font(.largeTitle)
             RKViewController(isPresented: self.$singleIsPresented, rkManager: self.rkManager1)
             NavigationLink(destination: ScheduleDayView(varFromParent: $selectedVal)) {
             Text("Edit")
