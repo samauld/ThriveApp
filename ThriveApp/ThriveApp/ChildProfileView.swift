@@ -42,7 +42,7 @@ struct ChildProfileView: View {
                     Image("scheduler").resizable()
                     .frame(width: 135.0, height: 135.0)
                     .clipShape(Circle())
-                    NavigationLink(destination: ScheduleView()) {
+                    NavigationLink(destination: ScheduleCal()) {
                         Text("Schedule")
                     }
                 }
