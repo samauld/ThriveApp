@@ -8,12 +8,61 @@
 
 import SwiftUI
 import FirebaseAuth
+import FirebaseFirestore
+
 
 struct ParentCommunicationPortal: View {
     
     @State private var post: String = ""
     @State private var posts = [Post]()
     @State private var user = Auth.auth().currentUser;
+    let db = Firestore.firestore()
+    
+    func readPosts(){
+//        db.collection("profiles").document(user?.uid ?? "").collection("portal").getDocuments() { (querySnapshot, err) in
+//            if let err = err {
+//                print("Error getting documents: \(err)")
+//            } else {
+//                print(querySnapshot!.documents)
+//                print("after query")
+//                for document in querySnapshot!.documents {
+//                    print("\(document.documentID) => \(document.data())")
+//                }
+//            }
+//        }
+        print (user?.uid)
+
+//        db.collection("profiles").getDocuments() { (querySnapshot, err) in
+//            if let err = err {
+//                print("Error getting documents: \(err)")
+//            } else {
+//                for document in querySnapshot!.documents {
+//                    print("\(document.documentID) => \(document.data())")
+//                }
+//            }
+//        }
+        db.collection("profiles").document(user?.uid ?? "").getDocument()  { (document, error) in
+            if let document = document {
+                let group_array = document[self.user?.uid ?? ""] as? Array ?? [""]
+                print(group_array)
+            }
+
+        }
+
+        
+    }
+    
+    func writePost(post: Post){
+        readPosts()
+//        db.collection("profiles").document(user?.uid ?? "" ).collection("portal").addDocument(data: [ "content": post.content, "date": post.time, "user": post.user]
+//        ) { err in
+//            if let err = err {
+//                print("Error adding document: \(err)")
+//            } else {
+//                print("Document added")
+//            }
+//        }
+    }
     
     func appendPost(str: String){
         let date = Date()
@@ -28,6 +77,7 @@ struct ParentCommunicationPortal: View {
         content: str,
         time: "\(month)/\(day)/\(year) \(hour):\(minutes)")
         
+        writePost(post: p)
         posts.append(p)
         post=""
     }

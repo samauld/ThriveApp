@@ -16,7 +16,7 @@ struct ChildProfileView: View {
                 
                 VStack {
                     
-                    Image("blankimg").resizable()
+                    Image("commportal").resizable()
                     .frame(width: 130.0, height: 130.0)
                     .clipShape(Circle())
                     NavigationLink(destination: ParentCommunicationPortal()) {
@@ -27,7 +27,7 @@ struct ChildProfileView: View {
                 
                 VStack {
                     
-                    Image("blankimg").resizable()
+                    Image("notification").resizable()
                     .frame(width: 130.0, height: 130.0)
                     .clipShape(Circle())
                     Button(action: {}) {
@@ -39,8 +39,8 @@ struct ChildProfileView: View {
             HStack(spacing: 50) {
                 VStack {
                     
-                    Image("blankimg").resizable()
-                    .frame(width: 130.0, height: 130.0)
+                    Image("scheduler").resizable()
+                    .frame(width: 135.0, height: 135.0)
                     .clipShape(Circle())
                     NavigationLink(destination: ScheduleView()) {
                         Text("Schedule")
@@ -48,7 +48,7 @@ struct ChildProfileView: View {
                 }
                 VStack {
                     
-                    Image("blankimg").resizable()
+                    Image("toolbox").resizable()
                     .frame(width: 130.0, height: 130.0)
                     .clipShape(Circle())
                     NavigationLink(destination: ToolboxView()) {
@@ -60,7 +60,7 @@ struct ChildProfileView: View {
             HStack(spacing: 50) {
                 VStack {
                     
-                    Image("blankimg").resizable()
+                    Image("rewardsbank").resizable()
                     .frame(width: 130.0, height: 130.0)
                     .clipShape(Circle())
                     NavigationLink(destination: RewardBankView()) {
@@ -69,7 +69,7 @@ struct ChildProfileView: View {
                 }
                 VStack {
                     
-                    Image("blankimg").resizable()
+                    Image("geofence").resizable()
                     .frame(width: 130.0, height: 130.0)
                     .clipShape(Circle())
                     Button(action: {}) {

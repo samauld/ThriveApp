@@ -11,29 +11,32 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-        VStack {
-        Text("Thrive")
-            .font(.largeTitle)
-            .fontWeight(.semibold)
-            .padding(5)
-        Text("Thriving on the Spectrum")
-            .font(.title)
-                .padding(5)
-        NavigationLink(destination: SignInView() ) {
-            Text("Sign In")
-            .foregroundColor(.blue)
-            .font(.title)
-            .padding()
-            .border(Color.blue, width: 5)
-        }.padding()
-        NavigationLink(destination: SignUpView()) {
-            Text("Sign Up")
-            .foregroundColor(.blue)
-            .font(.title)
-            .padding()
-            .border(Color.blue, width: 5)
-        }
-        }
+            VStack {
+                Image("cropped").resizable()
+                    .frame(width: 130.0, height: 130.0)
+                    .clipShape(Circle())
+                Text("Thrive")
+                    .font(.largeTitle)
+                    .fontWeight(.semibold)
+                    .padding(5)
+                Text("Thriving on the Spectrum")
+                    .font(.title)
+                    .padding(5)
+                NavigationLink(destination: SignInView() ) {
+                    Text("Sign In")
+                    .foregroundColor(.blue)
+                    .font(.title)
+                    .padding()
+                    .border(Color.blue, width: 5)
+                }.padding()
+                NavigationLink(destination: SignUpView()) {
+                    Text("Sign Up")
+                    .foregroundColor(.blue)
+                    .font(.title)
+                    .padding()
+                    .border(Color.blue, width: 5)
+                }
+            }
         }
     }
 }
