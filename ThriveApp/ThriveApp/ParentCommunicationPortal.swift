@@ -30,7 +30,7 @@ struct ParentCommunicationPortal: View {
 //                }
 //            }
 //        }
-        print (user?.uid)
+        //print (user?.uid)
 
 //        db.collection("profiles").getDocuments() { (querySnapshot, err) in
 //            if let err = err {
@@ -41,13 +41,13 @@ struct ParentCommunicationPortal: View {
 //                }
 //            }
 //        }
-        db.collection("profiles").document(user?.uid ?? "").getDocument()  { (document, error) in
-            if let document = document {
-                let group_array = document[self.user?.uid ?? ""] as? Array ?? [""]
-                print(group_array)
-            }
-
-        }
+//        db.collection("profiles").document(user?.uid ?? "").getDocument()  { (document, error) in
+//            if let document = document {
+//                let group_array = document[self.user?.uid ?? ""] as? Array ?? [""]
+//                print(group_array)
+//            }
+//
+//        }
 
         
     }

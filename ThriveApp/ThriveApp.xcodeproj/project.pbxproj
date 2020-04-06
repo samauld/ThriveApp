@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		761CDAC924305BBA0057A736 /* ToolboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761CDAC824305BBA0057A736 /* ToolboxView.swift */; };
+		79430E98243AD855009ED9BF /* ScheduleCal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79430E97243AD855009ED9BF /* ScheduleCal.swift */; };
+		79430E9C243B6E67009ED9BF /* Manager in Resources */ = {isa = PBXBuildFile; fileRef = 79430E9B243B6E67009ED9BF /* Manager */; };
+		79430E9E243B6EAE009ED9BF /* RKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79430E9D243B6EAE009ED9BF /* RKManager.swift */; };
+		79430EA0243B6EC9009ED9BF /* RKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79430E9F243B6EC9009ED9BF /* RKViewController.swift */; };
+		79430EA6243B6ED5009ED9BF /* RKDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79430EA1243B6ED4009ED9BF /* RKDate.swift */; };
+		79430EA7243B6ED5009ED9BF /* RKWeekdayHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79430EA2243B6ED4009ED9BF /* RKWeekdayHeader.swift */; };
+		79430EA8243B6ED5009ED9BF /* RKColorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79430EA3243B6ED4009ED9BF /* RKColorSettings.swift */; };
+		79430EA9243B6ED5009ED9BF /* RKCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79430EA4243B6ED4009ED9BF /* RKCell.swift */; };
+		79430EAA243B6ED5009ED9BF /* RKMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79430EA5243B6ED4009ED9BF /* RKMonth.swift */; };
 		7971B0D523FA11AC0018201F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971B0D423FA11AC0018201F /* SignUpView.swift */; };
 		7971B0D723FA13A60018201F /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971B0D623FA13A60018201F /* SignInView.swift */; };
 		7971B0D9240434260018201F /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971B0D8240434260018201F /* SignInController.swift */; };
@@ -44,6 +53,15 @@
 		3332ADE4573FA4275F8EF874 /* Pods-ThriveApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThriveApp.release.xcconfig"; path = "Target Support Files/Pods-ThriveApp/Pods-ThriveApp.release.xcconfig"; sourceTree = "<group>"; };
 		761CDAC824305BBA0057A736 /* ToolboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolboxView.swift; sourceTree = "<group>"; };
 		780925BFE68A53B88C924BE1 /* Pods-ThriveAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThriveAppTests.release.xcconfig"; path = "Target Support Files/Pods-ThriveAppTests/Pods-ThriveAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		79430E97243AD855009ED9BF /* ScheduleCal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCal.swift; sourceTree = "<group>"; };
+		79430E9B243B6E67009ED9BF /* Manager */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Manager; sourceTree = "<group>"; };
+		79430E9D243B6EAE009ED9BF /* RKManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKManager.swift; sourceTree = "<group>"; };
+		79430E9F243B6EC9009ED9BF /* RKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKViewController.swift; sourceTree = "<group>"; };
+		79430EA1243B6ED4009ED9BF /* RKDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKDate.swift; sourceTree = "<group>"; };
+		79430EA2243B6ED4009ED9BF /* RKWeekdayHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKWeekdayHeader.swift; sourceTree = "<group>"; };
+		79430EA3243B6ED4009ED9BF /* RKColorSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKColorSettings.swift; sourceTree = "<group>"; };
+		79430EA4243B6ED4009ED9BF /* RKCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKCell.swift; sourceTree = "<group>"; };
+		79430EA5243B6ED4009ED9BF /* RKMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKMonth.swift; sourceTree = "<group>"; };
 		7971B0D423FA11AC0018201F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		7971B0D623FA13A60018201F /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		7971B0D8240434260018201F /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
@@ -135,12 +153,20 @@
 		7977ACBC23E4EBEB005C841D /* ThriveApp */ = {
 			isa = PBXGroup;
 			children = (
+				79430E9B243B6E67009ED9BF /* Manager */,
 				7977ACBD23E4EBEB005C841D /* AppDelegate.swift */,
 				7977ACBF23E4EBEB005C841D /* SceneDelegate.swift */,
 				7977ACC123E4EBEB005C841D /* ContentView.swift */,
 				7977ACC323E4EBEC005C841D /* Assets.xcassets */,
 				7977ACC823E4EBEC005C841D /* LaunchScreen.storyboard */,
 				797324982429124000F7F36A /* ScheduleDayView.swift */,
+				79430EA4243B6ED4009ED9BF /* RKCell.swift */,
+				79430EA3243B6ED4009ED9BF /* RKColorSettings.swift */,
+				79430EA1243B6ED4009ED9BF /* RKDate.swift */,
+				79430EA5243B6ED4009ED9BF /* RKMonth.swift */,
+				79430EA2243B6ED4009ED9BF /* RKWeekdayHeader.swift */,
+				79430E9F243B6EC9009ED9BF /* RKViewController.swift */,
+				79430E9D243B6EAE009ED9BF /* RKManager.swift */,
 				7973249A242912A100F7F36A /* ScheduleView.swift */,
 				7977ACCB23E4EBEC005C841D /* Info.plist */,
 				7977ACDF23E4EC8B005C841D /* GoogleService-Info.plist */,
@@ -154,6 +180,7 @@
 				7972A4FF243218AA00AD7869 /* PostView.swift */,
 				7972A501243218F400AD7869 /* Post.swift */,
 				A134E3FD243243E500A019F4 /* RewardBankView.swift */,
+				79430E97243AD855009ED9BF /* ScheduleCal.swift */,
 			);
 			path = ThriveApp;
 			sourceTree = "<group>";
@@ -193,6 +220,8 @@
 			dependencies = (
 			);
 			name = ThriveApp;
+			packageProductDependencies = (
+			);
 			productName = ThriveApp;
 			productReference = 7977ACBA23E4EBEB005C841D /* ThriveApp.app */;
 			productType = "com.apple.product-type.application";
@@ -244,6 +273,8 @@
 				Base,
 			);
 			mainGroup = 7977ACB123E4EBEB005C841D;
+			packageReferences = (
+			);
 			productRefGroup = 7977ACBB23E4EBEB005C841D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -263,6 +294,7 @@
 				7977ACE023E4EC8B005C841D /* GoogleService-Info.plist in Resources */,
 				7977ACC723E4EBEC005C841D /* Preview Assets.xcassets in Resources */,
 				7977ACC423E4EBEC005C841D /* Assets.xcassets in Resources */,
+				79430E9C243B6E67009ED9BF /* Manager in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,8 +378,10 @@
 			files = (
 				7971B0D523FA11AC0018201F /* SignUpView.swift in Sources */,
 				A134E3FE243243E500A019F4 /* RewardBankView.swift in Sources */,
+				79430E9E243B6EAE009ED9BF /* RKManager.swift in Sources */,
 				A1DE6F51240CC10000196CD9 /* ChildProfileView.swift in Sources */,
 				7977ACBE23E4EBEB005C841D /* AppDelegate.swift in Sources */,
+				79430E98243AD855009ED9BF /* ScheduleCal.swift in Sources */,
 				761CDAC924305BBA0057A736 /* ToolboxView.swift in Sources */,
 				7972A502243218F400AD7869 /* Post.swift in Sources */,
 				7977ACC023E4EBEB005C841D /* SceneDelegate.swift in Sources */,
@@ -355,8 +389,14 @@
 				7973249B242912A100F7F36A /* ScheduleView.swift in Sources */,
 				797324992429124000F7F36A /* ScheduleDayView.swift in Sources */,
 				7971B0D9240434260018201F /* SignInController.swift in Sources */,
+				79430EAA243B6ED5009ED9BF /* RKMonth.swift in Sources */,
+				79430EA8243B6ED5009ED9BF /* RKColorSettings.swift in Sources */,
 				7977ACC223E4EBEB005C841D /* ContentView.swift in Sources */,
+				79430EA0243B6EC9009ED9BF /* RKViewController.swift in Sources */,
+				79430EA7243B6ED5009ED9BF /* RKWeekdayHeader.swift in Sources */,
 				7971B0D723FA13A60018201F /* SignInView.swift in Sources */,
+				79430EA6243B6ED5009ED9BF /* RKDate.swift in Sources */,
+				79430EA9243B6ED5009ED9BF /* RKCell.swift in Sources */,
 				7972A500243218AA00AD7869 /* PostView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +484,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -498,6 +539,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";

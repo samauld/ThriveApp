@@ -10,9 +10,11 @@ import SwiftUI
 struct ScheduleDayView: View {
     @State private var username: String = ""
     @State private var password: String = ""
+    @Binding var varFromParent : String
+    
     var body: some View {
         VStack{
-            Text("Monday 3/2")
+            Text("\(varFromParent)")
                 .font(.title)
                 .padding()
             Divider()
@@ -100,6 +102,6 @@ struct ScheduleDayView: View {
 
 struct ScheduleDayView_Previews: PreviewProvider {
     static var previews: some View {
-        ScheduleDayView()
+        ScheduleDayView(varFromParent: .constant("TestTest"))
     }
 }
