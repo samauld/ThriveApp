@@ -285,6 +285,7 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
+  - PDTSimpleCalendar (0.9.1)
   - PromisesObjC (1.2.8)
 
 DEPENDENCIES:
@@ -292,6 +293,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Database
   - Firebase/Firestore
+  - PDTSimpleCalendar (~> 0.9.1)
 
 SPEC REPOS:
   trunk:
@@ -317,6 +319,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
+    - PDTSimpleCalendar
     - PromisesObjC
 
 SPEC CHECKSUMS:
@@ -342,8 +345,9 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: cea130bbfe5a7edc8d06d3f0d17288c32ffe9925
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
+  PDTSimpleCalendar: d1c03387678422715dc021aa1a85d70f4d1014f2
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
 
-PODFILE CHECKSUM: d56ffd8443301964b34dceb37f0a6f69bf1a5591
+PODFILE CHECKSUM: 05ceebab9afc015c0a22f9cd7ebe6ec93b217117
 
 COCOAPODS: 1.8.4
