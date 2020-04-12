@@ -19,11 +19,10 @@ struct ScheduleCal : View {
     var rkManager1 = RKManager(calendar: Calendar.current, minimumDate: Date(), maximumDate: Date().addingTimeInterval(60*60*24*365), mode: 0)
     
     var body: some View {
-        NavigationView{
         VStack (spacing: 25) {
             Image("scheduler").resizable()
             .frame(width: 200, height: 200)
-                .offset(y: -70)
+                .offset(x: 10, y: -30)
             Text("Adam's Schedule").font(.largeTitle)
             RKViewController(isPresented: self.$singleIsPresented, rkManager: self.rkManager1)
             NavigationLink(destination: ScheduleDayView(varFromParent: $selectedVal)) {
@@ -35,7 +34,7 @@ struct ScheduleCal : View {
             }
         }.onAppear(perform: startUp)
             .navigationViewStyle(StackNavigationViewStyle())
-        }
+        
     }
     
     func datesView(dates: [Date]) -> some View {

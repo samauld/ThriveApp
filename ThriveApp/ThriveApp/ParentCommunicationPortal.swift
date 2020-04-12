@@ -19,78 +19,74 @@ struct ParentCommunicationPortal: View {
     let db = Firestore.firestore()
     
     func readPosts(){
-//        db.collection("profiles").document(user?.uid ?? "").collection("portal").getDocuments() { (querySnapshot, err) in
-//            if let err = err {
-//                print("Error getting documents: \(err)")
-//            } else {
-//                print(querySnapshot!.documents)
-//                print("after query")
-//                for document in querySnapshot!.documents {
-//                    print("\(document.documentID) => \(document.data())")
-//                }
-//            }
-//        }
-        //print (user?.uid)
-
-//        db.collection("profiles").getDocuments() { (querySnapshot, err) in
-//            if let err = err {
-//                print("Error getting documents: \(err)")
-//            } else {
-//                for document in querySnapshot!.documents {
-//                    print("\(document.documentID) => \(document.data())")
-//                }
-//            }
-//        }
-//        db.collection("profiles").document(user?.uid ?? "").getDocument()  { (document, error) in
-//            if let document = document {
-//                let group_array = document[self.user?.uid ?? ""] as? Array ?? [""]
-//                print(group_array)
-//            }
-//
-//        }
-
-        
+         db.collection("profiles").document(user?.uid ?? "").collection("portal").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    self.posts.insert(Post(image: "mojave",
+                                      content: document.data()["content"] as! String,
+                    time: document.data()["date"] as! String,
+                    user: document.data()["user"] as! String, utcDate: (document.data()["utcDate"] as! Timestamp).dateValue()), at:0)
+                }
+            }
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.posts = self.posts.sorted { $0.UTCdate > $1.UTCdate }
+        }
+    }
+    
+    func sortPosts(){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            let sortedDates = self.posts.sorted { $0.time > $1.time }
+            print(sortedDates)
+            self.posts = sortedDates;
+        }
     }
     
     func writePost(post: Post){
-        readPosts()
-//        db.collection("profiles").document(user?.uid ?? "" ).collection("portal").addDocument(data: [ "content": post.content, "date": post.time, "user": post.user]
-//        ) { err in
-//            if let err = err {
-//                print("Error adding document: \(err)")
-//            } else {
-//                print("Document added")
-//            }
-//        }
+        db.collection("profiles").document(user?.uid ?? "" ).collection("portal").addDocument(data: [ "content": post.content, "date": post.time, "user": post.user, "utcDate": post.UTCdate]
+        ) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added")
+            }
+        }
     }
     
     func appendPost(str: String){
         let date = Date()
+        let stamp = Timestamp(date: date)
         let calendar = Calendar.current
-        let hour = calendar.component(.hour, from: date)
-        let minutes = calendar.component(.minute, from: date)
         let month = calendar.component(.month, from: date)
         let day = calendar.component(.day, from: date)
         let year = calendar.component(.year, from: date)
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh:mm a"
+        let string = dateFormatter.string(from: date as Date)
+        print(string)
+        
         let p = Post(image: "mojave",
         content: str,
-        time: "\(month)/\(day)/\(year) \(hour):\(minutes)")
+        time: "\(month)/\(day)/\(year) \(string)",
+            user: (Auth.auth().currentUser?.email)!,
+            utcDate: date)
         
         writePost(post: p)
-        posts.append(p)
+        posts.insert(p, at:0)
         post=""
     }
-    
+
     var body: some View {
-        NavigationView(){
-            VStack(){
+        VStack(){
                 Text("Recent Posts")
                     .fontWeight(.semibold)
                 .padding(5)
                 List {
-                        // loop through all the posts and create a post view for each item
-                        ForEach(posts) { post in
+                    ForEach(posts) { post in
                            PostView(post: post)
                         }
                     }
@@ -108,8 +104,8 @@ struct ParentCommunicationPortal: View {
                 }
                 .padding(.top)
             }
+            .onAppear(perform: readPosts)
             .navigationBarTitle(Text("Communication Portal"), displayMode: .inline)
-        }
     }
 }
 

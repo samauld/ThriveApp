@@ -31,8 +31,13 @@ struct SignInView: View {
                 .font(.title)
                 .padding()
                 .border(Color.blue, width: 5)
+                
             }
-        }
+            
+            NavigationLink(destination: ChildProfileView()){
+                Text("Test here")
+            }
+            }
         
     }
 }

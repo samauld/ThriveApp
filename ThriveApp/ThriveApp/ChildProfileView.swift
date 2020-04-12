@@ -10,13 +10,12 @@ import SwiftUI
 
 struct ChildProfileView: View {
     var body: some View {
-        NavigationView {
         VStack {
             HStack(spacing: 50) {
                 
                 VStack {
                     
-                    Image("commportal").resizable()
+                Image("commportal").resizable()
                     .frame(width: 130.0, height: 130.0)
                     .clipShape(Circle())
                     NavigationLink(destination: ParentCommunicationPortal()) {
@@ -88,7 +87,6 @@ struct ChildProfileView: View {
             }
             .navigationBarTitle(Text("Adam's Profile"), displayMode: .inline)
         }
-    }
     }
 }
 
