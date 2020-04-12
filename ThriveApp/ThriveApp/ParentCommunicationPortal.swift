@@ -19,29 +19,32 @@ struct ParentCommunicationPortal: View {
     let db = Firestore.firestore()
     
     func readPosts(){
-         db.collection("profiles").document(user?.uid ?? "").collection("portal").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
-                    self.posts.insert(Post(image: "mojave",
-                                      content: document.data()["content"] as! String,
-                    time: document.data()["date"] as! String,
-                    user: document.data()["user"] as! String, utcDate: (document.data()["utcDate"] as! Timestamp).dateValue()), at:0)
+        var docRef = db.collection("profiles").document(user?.uid ?? "");
+
+        docRef.getDocument { (document, error) in
+        if let document = document {
+            if document.exists{
+                docRef.collection("portal").getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        print("\(document.documentID) => \(document.data())")
+                        self.posts.insert(Post(image: "mojave",
+                                          content: document.data()["content"] as! String,
+                        time: document.data()["date"] as! String,
+                        user: document.data()["user"] as! String, utcDate: (document.data()["utcDate"] as! Timestamp).dateValue()), at:0)
+                    }
                 }
+                }
+            }
+            else {
+                print("Document does not exist")
             }
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             self.posts = self.posts.sorted { $0.UTCdate > $1.UTCdate }
         }
-    }
-    
-    func sortPosts(){
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            let sortedDates = self.posts.sorted { $0.time > $1.time }
-            print(sortedDates)
-            self.posts = sortedDates;
         }
     }
     
