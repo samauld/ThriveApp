@@ -24,18 +24,32 @@ struct ContentView: View {
                     .padding(5)
                 NavigationLink(destination: SignInView() ) {
                     Text("Sign In")
-                    .foregroundColor(.blue)
+                        .foregroundColor(.white)
                     .font(.title)
+                    .frame(minWidth: 0, maxWidth: 200)
                     .padding()
-                    .border(Color.blue, width: 5)
+                    .background(LinearGradient(gradient: Gradient(colors: [Color("ThriveBlue"), Color(red: 3/255, green: 161/255, blue: 235/255)]), startPoint: .leading, endPoint: .trailing))
+                    .cornerRadius(40)
+
                 }.padding()
                 NavigationLink(destination: SignUpView()) {
                     Text("Sign Up")
-                    .foregroundColor(.blue)
+                        .foregroundColor(.white)
                     .font(.title)
+                    .frame(minWidth: 0, maxWidth: 200)
                     .padding()
-                    .border(Color.blue, width: 5)
+                    .background(LinearGradient(gradient: Gradient(colors: [Color("ThriveBlue"), Color(red: 3/255, green: 161/255, blue: 235/255)]), startPoint: .leading, endPoint: .trailing))
+                    .cornerRadius(40)
                 }
+                NavigationLink(destination: ChildProfileView()) {
+                    Text("Testing")
+                        .foregroundColor(.white)
+                    .font(.title)
+                    .frame(minWidth: 0, maxWidth: 200)
+                    .padding()
+                    .background(LinearGradient(gradient: Gradient(colors: [Color("ThriveBlue"), Color(red: 3/255, green: 161/255, blue: 235/255)]), startPoint: .leading, endPoint: .trailing))
+                    .cornerRadius(40)
+                }.padding()
             }
         }
     }
