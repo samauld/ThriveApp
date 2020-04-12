@@ -27,8 +27,8 @@ struct PostView: View {
                 
                 HStack(spacing: 10) {
                     
-//                    // avatar
-//                    AvatarView(image: post.user.avatar, size: 70)
+                    Image("commportal").resizable()
+                    .frame(width: 50, height: 50)
                     
                     VStack(alignment: .leading, spacing: 3) {
                         
