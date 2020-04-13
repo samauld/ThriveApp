@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		761CDAC924305BBA0057A736 /* ToolboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761CDAC824305BBA0057A736 /* ToolboxView.swift */; };
 		761CDACB243AEFAE0057A736 /* ToolDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761CDACA243AEFAE0057A736 /* ToolDetailView.swift */; };
+		763D6C6D2444062D00B226F7 /* ToolboxAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763D6C6C2444062D00B226F7 /* ToolboxAdd.swift */; };
 		79430E98243AD855009ED9BF /* ScheduleCal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79430E97243AD855009ED9BF /* ScheduleCal.swift */; };
-		79430E9C243B6E67009ED9BF /* Manager in Resources */ = {isa = PBXBuildFile; fileRef = 79430E9B243B6E67009ED9BF /* Manager */; };
 		79430E9E243B6EAE009ED9BF /* RKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79430E9D243B6EAE009ED9BF /* RKManager.swift */; };
 		79430EA0243B6EC9009ED9BF /* RKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79430E9F243B6EC9009ED9BF /* RKViewController.swift */; };
 		79430EA6243B6ED5009ED9BF /* RKDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79430EA1243B6ED4009ED9BF /* RKDate.swift */; };
@@ -55,9 +55,9 @@
 		3332ADE4573FA4275F8EF874 /* Pods-ThriveApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThriveApp.release.xcconfig"; path = "Target Support Files/Pods-ThriveApp/Pods-ThriveApp.release.xcconfig"; sourceTree = "<group>"; };
 		761CDAC824305BBA0057A736 /* ToolboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolboxView.swift; sourceTree = "<group>"; };
 		761CDACA243AEFAE0057A736 /* ToolDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolDetailView.swift; sourceTree = "<group>"; };
+		763D6C6C2444062D00B226F7 /* ToolboxAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolboxAdd.swift; sourceTree = "<group>"; };
 		780925BFE68A53B88C924BE1 /* Pods-ThriveAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThriveAppTests.release.xcconfig"; path = "Target Support Files/Pods-ThriveAppTests/Pods-ThriveAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		79430E97243AD855009ED9BF /* ScheduleCal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCal.swift; sourceTree = "<group>"; };
-		79430E9B243B6E67009ED9BF /* Manager */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Manager; sourceTree = "<group>"; };
 		79430E9D243B6EAE009ED9BF /* RKManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKManager.swift; sourceTree = "<group>"; };
 		79430E9F243B6EC9009ED9BF /* RKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKViewController.swift; sourceTree = "<group>"; };
 		79430EA1243B6ED4009ED9BF /* RKDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKDate.swift; sourceTree = "<group>"; };
@@ -157,7 +157,6 @@
 		7977ACBC23E4EBEB005C841D /* ThriveApp */ = {
 			isa = PBXGroup;
 			children = (
-				79430E9B243B6E67009ED9BF /* Manager */,
 				7977ACBD23E4EBEB005C841D /* AppDelegate.swift */,
 				7977ACBF23E4EBEB005C841D /* SceneDelegate.swift */,
 				7977ACC123E4EBEB005C841D /* ContentView.swift */,
@@ -185,6 +184,7 @@
 				A134E3FD243243E500A019F4 /* RewardBankView.swift */,
 				A193EE742443A0DD00A8CB44 /* ScheduleDayAddActivity.swift */,
 				761CDAC824305BBA0057A736 /* ToolboxView.swift */,
+				763D6C6C2444062D00B226F7 /* ToolboxAdd.swift */,
 				761CDACA243AEFAE0057A736 /* ToolDetailView.swift */,
 				79430E97243AD855009ED9BF /* ScheduleCal.swift */,
 			);
@@ -300,7 +300,6 @@
 				7977ACE023E4EC8B005C841D /* GoogleService-Info.plist in Resources */,
 				7977ACC723E4EBEC005C841D /* Preview Assets.xcassets in Resources */,
 				7977ACC423E4EBEC005C841D /* Assets.xcassets in Resources */,
-				79430E9C243B6E67009ED9BF /* Manager in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +392,7 @@
 				761CDAC924305BBA0057A736 /* ToolboxView.swift in Sources */,
 				7972A502243218F400AD7869 /* Post.swift in Sources */,
 				7977ACC023E4EBEB005C841D /* SceneDelegate.swift in Sources */,
+				763D6C6D2444062D00B226F7 /* ToolboxAdd.swift in Sources */,
 				797324972428357E00F7F36A /* ParentCommunicationPortal.swift in Sources */,
 				7973249B242912A100F7F36A /* ScheduleView.swift in Sources */,
 				797324992429124000F7F36A /* ScheduleDayView.swift in Sources */,
