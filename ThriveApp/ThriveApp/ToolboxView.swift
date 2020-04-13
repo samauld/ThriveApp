@@ -7,24 +7,31 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import FirebaseFirestore
 
 struct ToolboxView: View {
+    @State private var user = Auth.auth().currentUser
     @State private var heartRate: Double = 70
+    let db = Firestore.firestore()
+
     
-    //TODO: implement these functions
-    func getTools(){
-        //get the stored tools from firebase
-    }
-    
-    func appendTool(){
-        //add tool to firebase and update UI
+    func readTools() {
+        db.collection("users").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                }
+            }
+        }
     }
     
     var body: some View {
         NavigationView(){
             VStack{
                 List{
-                    //TODO: create ToolDetailView to populate the list
                     HStack {
                         Image("toolbox").resizable()
                         .frame(width: 50, height: 50)
@@ -32,32 +39,18 @@ struct ToolboxView: View {
                             Text("Blow Bubbles")
                         }.multilineTextAlignment(.leading)
                         //Have some sort of indication for what tool is active
-                        Image("notification").resizable()
-                        .frame(width: 50, height: 50)
+                        //Image("notification").resizable().frame(width: 50, height: 50)
                     }
-                    HStack {
-                        Image("toolbox").resizable()
-                        .frame(width: 50, height: 50)
-                        NavigationLink(destination:ToolDetailView()){
-                            Text("Take Deep Breaths")
-                        }.multilineTextAlignment(.leading)
-                    }
-                    HStack {
-                        Image("toolbox").resizable()
-                        .frame(width: 50, height: 50)
-                        NavigationLink(destination:ToolDetailView()){
-                            Text("Go for a walk")
-                            .multilineTextAlignment(.leading)
-                        }
-                    }
+                }
+                Button(action: {self.readTools()}) {
+                    Text("debug")
                 }
                 HStack {
                     Text("Heartrate")
-                    //Is this a good range??
                     Slider(value: $heartRate, in: 70...100, step:1.0)
                     Text("\(heartRate, specifier: "%.0f")")
                 }.padding()
-                Button(action:{}) {
+                NavigationLink(destination: ToolboxAdd()){
                    Text("+ Add Regulation Tool")
                     .foregroundColor(.blue)
                     .font(.title)
