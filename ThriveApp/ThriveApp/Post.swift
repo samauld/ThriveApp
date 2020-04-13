@@ -27,11 +27,15 @@ struct Post: Identifiable {
     /// post time
     let time: String!
     
+    let UTCdate: Date
+    
+    
     /// Init
-    init(image: String?, content: String?, time: String) {
-        self.user = (Auth.auth().currentUser?.email)!
+    init(image: String?, content: String?, time: String, user: String, utcDate: Date) {
+        self.user = user
         self.image = image
         self.content = content
         self.time = time
+        self.UTCdate = utcDate
     }
 }

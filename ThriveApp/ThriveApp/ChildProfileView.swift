@@ -15,7 +15,7 @@ struct ChildProfileView: View {
                 
                 VStack {
                     
-                    Image("commportal").resizable()
+                Image("commportal").resizable()
                     .frame(width: 130.0, height: 130.0)
                     .clipShape(Rectangle())
                     NavigationLink(destination: ParentCommunicationPortal()) {
@@ -41,7 +41,7 @@ struct ChildProfileView: View {
                     Image("scheduler").resizable()
                     .frame(width: 135.0, height: 135.0)
                     .clipShape(Rectangle())
-                    NavigationLink(destination: ScheduleView()) {
+                    NavigationLink(destination: ScheduleCal()) {
                         Text("Schedule")
                     }
                 }
@@ -87,7 +87,6 @@ struct ChildProfileView: View {
             }
             .navigationBarTitle(Text("Adam's Profile"), displayMode: .inline)
         }
-    
     }
 }
 
