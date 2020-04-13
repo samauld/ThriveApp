@@ -17,7 +17,7 @@ struct ChildProfileView: View {
                     
                 Image("commportal").resizable()
                     .frame(width: 130.0, height: 130.0)
-                    .clipShape(Circle())
+                    .clipShape(Rectangle())
                     NavigationLink(destination: ParentCommunicationPortal()) {
                         Text("Messages")
                     }
@@ -28,7 +28,7 @@ struct ChildProfileView: View {
                     
                     Image("notification").resizable()
                     .frame(width: 130.0, height: 130.0)
-                    .clipShape(Circle())
+                    .clipShape(Rectangle())
                     Button(action: {}) {
                         Text("Notifications")
                     }
@@ -40,7 +40,7 @@ struct ChildProfileView: View {
                     
                     Image("scheduler").resizable()
                     .frame(width: 135.0, height: 135.0)
-                    .clipShape(Circle())
+                    .clipShape(Rectangle())
                     NavigationLink(destination: ScheduleCal()) {
                         Text("Schedule")
                     }
@@ -49,7 +49,7 @@ struct ChildProfileView: View {
                     
                     Image("toolbox").resizable()
                     .frame(width: 130.0, height: 130.0)
-                    .clipShape(Circle())
+                    .clipShape(Rectangle())
                     NavigationLink(destination: ToolboxView()) {
                         Text("Regulation Toolbox")
                     }
@@ -61,7 +61,7 @@ struct ChildProfileView: View {
                     
                     Image("rewardsbank").resizable()
                     .frame(width: 130.0, height: 130.0)
-                    .clipShape(Circle())
+                    .clipShape(Rectangle())
                     NavigationLink(destination: RewardBankView()) {
                         Text("Reward Bank")
                     }
@@ -70,7 +70,7 @@ struct ChildProfileView: View {
                     
                     Image("geofence").resizable()
                     .frame(width: 130.0, height: 130.0)
-                    .clipShape(Circle())
+                    .clipShape(Rectangle())
                     Button(action: {}) {
                         Text("Geofences")
                     }
