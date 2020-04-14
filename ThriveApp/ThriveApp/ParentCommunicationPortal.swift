@@ -19,11 +19,11 @@ struct ParentCommunicationPortal: View {
     let db = Firestore.firestore()
     
     func readPosts(){
-        var docRef = db.collection("profiles").document(user?.uid ?? "");
+        let docRef = db.collection("profiles").document(user?.uid ?? "");
 
         docRef.getDocument { (document, error) in
         if let document = document {
-            if document.exists{
+            //if document.exists{
                 docRef.collection("portal").getDocuments() { (querySnapshot, err) in
                 if let err = err {
                     print("Error getting documents: \(err)")
@@ -46,8 +46,8 @@ struct ParentCommunicationPortal: View {
             self.posts = self.posts.sorted { $0.UTCdate > $1.UTCdate }
         }
         }
-    }
     
+
     func writePost(post: Post){
         db.collection("profiles").document(user?.uid ?? "" ).collection("portal").addDocument(data: [ "content": post.content, "date": post.time, "user": post.user, "utcDate": post.UTCdate]
         ) { err in
@@ -61,7 +61,6 @@ struct ParentCommunicationPortal: View {
     
     func appendPost(str: String){
         let date = Date()
-        let stamp = Timestamp(date: date)
         let calendar = Calendar.current
         let month = calendar.component(.month, from: date)
         let day = calendar.component(.day, from: date)
