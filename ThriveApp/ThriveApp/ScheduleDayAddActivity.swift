@@ -68,13 +68,14 @@ struct ScheduleDayAddActivity: View {
         let year = calendar.component(.year, from: date)
         
         let time = "\(month)/\(day)/\(year) \(hour):\(minutes)"
+        let collDay = "\(month).\(day).\(year)"
         
         var taskArr: [String] = [];
         for task in taskList {
             taskArr.append(task.title)
         }
         
-        db.collection("schedules")
+        db.collection("schedules").document(user?.uid ?? "" ).collection(collDay)
             .addDocument(data: [ "USER": "me", "EDITED": time, "TITLE": title, "TASKS": taskArr]
                 ) { err in
                     if let err = err {
