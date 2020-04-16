@@ -13,8 +13,8 @@ struct ScheduleDayView: View {
     @State private var username: String = ""
     @State private var password: String = ""
     @State private var user = Auth.auth().currentUser;
-    @Binding var varFromParent : String
     let db = Firestore.firestore()
+    var selectedDate: String
     
     func readSchedule() {
 //        print("hello");
@@ -46,7 +46,7 @@ struct ScheduleDayView: View {
         
     var body: some View {
         VStack{
-            Text("\(varFromParent)")
+            Text("\(selectedDate)")
                 .font(.title)
                 .padding()
             Divider()
@@ -136,6 +136,6 @@ struct ScheduleDayView: View {
 
 struct ScheduleDayView_Previews: PreviewProvider {
     static var previews: some View {
-        ScheduleDayView(varFromParent: .constant("TestTest"))
+        ScheduleDayView(selectedDate: "Date()")
     }
 }

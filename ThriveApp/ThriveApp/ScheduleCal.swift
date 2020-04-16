@@ -14,7 +14,10 @@ struct ScheduleCal : View {
     @State var startIsPresented = false
     @State var multipleIsPresented = false
     @State var deselectedIsPresented = false
-    @State var selectedVal = "April 7, 2020"
+    @State var pickedDate = ""
+    @State var dateRetrieved = false;
+    
+
     
     var rkManager1 = RKManager(calendar: Calendar.current, minimumDate: Date(), maximumDate: Date().addingTimeInterval(60*60*24*365), mode: 0)
     
@@ -25,12 +28,16 @@ struct ScheduleCal : View {
                 .offset(x: 10, y: -30)
             Text("Adam's Schedule").font(.largeTitle)
             RKViewController(isPresented: self.$singleIsPresented, rkManager: self.rkManager1)
-            NavigationLink(destination: ScheduleDayView(varFromParent: $selectedVal)) {
-            Text("Edit")
+            Button(action: {self.getTextFromDate(date: self.rkManager1.selectedDate)}) {
+                    Text("Edit")
             .foregroundColor(.blue)
             .font(.title)
             .padding()
             .border(Color.blue, width: 5)
+            }.sheet(isPresented: self.$dateRetrieved){
+                    
+                ScheduleDayView(selectedDate: self.pickedDate)
+                  
             }
         }.onAppear(perform: startUp)
             .navigationViewStyle(StackNavigationViewStyle())
@@ -57,10 +64,13 @@ struct ScheduleCal : View {
         let formatter = DateFormatter()
         formatter.locale = .current
         formatter.dateFormat = "EEEE, MMMM d, yyyy"
+        pickedDate = date == nil ? "" : formatter.string(from: date)
+        self.dateRetrieved = true
         return date == nil ? "" : formatter.string(from: date)
     }
 
 }
+
 
 struct ScheduleCal_Previews : PreviewProvider {
     static var previews: some View {

@@ -16,7 +16,7 @@ struct ScheduleView: View {
     
     var body: some View {
         VStack{
-            NavigationLink(destination: ScheduleDayView(varFromParent: .constant("t"))) {
+            NavigationLink(destination: ScheduleDayView(selectedDate: "Date()")) {
                 Text("Monday 3/2")
                 .foregroundColor(.blue)
                 .font(.title)

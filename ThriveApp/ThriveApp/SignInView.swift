@@ -7,36 +7,46 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseAuth
 
 struct SignInView: View {
     
     @State private var username: String = ""
     @State private var password: String = ""
+    @State var signInAuthorized: Bool = false
 
+    func signInAuthentication(email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            self.signInAuthorized = true
+        }
+    }
     
     var body: some View {
         VStack{
-            Text("Sign In")
-                .font(.title)
-                .padding()
-            TextField("Username", text: $username)
-                .padding(.all)
-                .frame(width: 300)
-            SecureField("Password", text: $password)
-                .padding(.all)
-                .frame(width: 300)
-            Button(action: {signInAuthentication(email: self.username, password: self.password)}) {
+            if !self.signInAuthorized{
                 Text("Sign In")
-                .foregroundColor(.blue)
-                .font(.title)
-                .padding()
-                .border(Color.blue, width: 5)
-                
+                    .font(.title)
+                    .padding()
+                TextField("Username", text: $username)
+                    .padding(.all)
+                    .frame(width: 300)
+                SecureField("Password", text: $password)
+                    .padding(.all)
+                    .frame(width: 300)
+                Button(action: {self.signInAuthentication(email: self.username, password: self.password)}) {
+                    Text("Sign In")
+                    .foregroundColor(.blue)
+                    .font(.title)
+                    .padding()
+                    .border(Color.blue, width: 5)
+                    
+                }
+            }
+            else {
+                ChildProfileView()
             }
             
-            NavigationLink(destination: ChildProfileView()){
-                Text("Test here")
-            }
             }
         
     }

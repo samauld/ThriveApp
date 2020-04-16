@@ -7,29 +7,43 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseAuth
 
 struct SignUpView: View {
     
     @State private var email: String = ""
     @State private var password: String = ""
+    @State private var signUpAuthenticated: Bool = false
+    
+    func signUpAuthentication(email: String, password: String) {
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            self.signUpAuthenticated = true
+        }
+    }
 
     var body: some View {
         VStack{
-            Text("Sign Up")
-                .font(.title)
-                .padding()
-            TextField("Email", text: $email)
-                .padding(.all)
-                .frame(width: 300)
-            SecureField("Password", text: $password)
-                .padding(.all)
-                .frame(width: 300)
-            Button(action: {signUpAuthentication(email: self.email, password: self.password)}) {
-                Text("Create account")
-                .foregroundColor(.blue)
-                .font(.title)
-                .padding()
-                .border(Color.blue, width: 5)
+            if !signUpAuthenticated{
+                Text("Sign Up")
+                    .font(.title)
+                    .padding()
+                TextField("Email", text: $email)
+                    .padding(.all)
+                    .frame(width: 300)
+                SecureField("Password", text: $password)
+                    .padding(.all)
+                    .frame(width: 300)
+                Button(action: {self.signUpAuthentication(email: self.email, password: self.password)}) {
+                    Text("Create account")
+                    .foregroundColor(.blue)
+                    .font(.title)
+                    .padding()
+                    .border(Color.blue, width: 5)
+                }
+            }
+            else {
+                ChildProfileView()
             }
         }
         
