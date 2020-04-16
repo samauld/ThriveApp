@@ -15,31 +15,27 @@ struct ScheduleDayView: View {
     @State private var user = Auth.auth().currentUser;
     let db = Firestore.firestore()
     var selectedDate: String
+    @State var taskList =  [Event]()
     
     func readSchedule() {
-//        print("hello");
-        
-        // WRITE
-//        db.collection("schedules")
-////            .document(user?.uid ?? "" ).collection("monday")
-//            .addDocument(data: [ "content": "hi", "date": "day1", "user": "username"]
-//                ) { err in
-//                    if let err = err {
-//                        print("Error adding document: \(err)")
-//                    } else {
-//                        print("Document added")
-//                    }
-//                }
-        
-        
-        // READ
-        db.collection("users").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
+        let docRef = db.collection("schedules").document(user?.uid ?? "");
+
+        docRef.getDocument { (document, error) in
+        if let document = document {
+            //if document.exists{
+            docRef.collection(self.selectedDate).getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        self.taskList.append(Event(tasks: document.data()["TASKS"] as! [String], title: document.data()["TITLE"] as! String))
+                        print(document.data())
+                    }
                 }
+                }
+            }
+            else {
+                print("Document does not exist")
             }
         }
     }
@@ -52,72 +48,17 @@ struct ScheduleDayView: View {
             Divider()
             //Spacer()
             VStack {
-                Button(action: {
-//                    self.readSchedule()
-                    signInAuthentication(email: self.username, password: self.password)
-                }) {
-                    Text("Event 1")
-                        .foregroundColor(.blue)
-                        .font(.title)
-                    .multilineTextAlignment(.leading)
-                        .padding()
-                        //.border(Color.blue, width: 5)
-                        .frame(width: 300, height: 60)
-                }
-                Divider()
-                Button(action: {
-                    signInAuthentication(email: self.username, password: self.password)
-                }) {
-                    Text("Event 2")
-                        .foregroundColor(.blue)
-                        .font(.title)
-                    .multilineTextAlignment(.leading)
-                        .padding()
-                        //.border(Color.blue, width: 5)
-                        .frame(width: 300, height: 60)
-                }
-                Divider()
-                Button(action: {
-                    signInAuthentication(email: self.username, password: self.password)
-                }) {
-                    Text("Event 3")
-                        .foregroundColor(.blue)
-                        .font(.title)
-                    .multilineTextAlignment(.leading)
-                        .padding()
-                        //.border(Color.blue, width: 5)
-                        .frame(width: 300, height: 60)
-                }
-                Divider()
-                Button(action: {
-                    signInAuthentication(email: self.username, password: self.password)
-                }) {
-                    Text("Event 4")
-                        .foregroundColor(.blue)
-                        .font(.title)
-                    .multilineTextAlignment(.leading)
-                        .padding()
-                        //.border(Color.blue, width: 5)
-                        .frame(width: 300, height: 60)
-                }
-                Divider()
-                Button(action: {
-                    signInAuthentication(email: self.username, password: self.password)
-                }) {
-                    Text("Event 5")
-                        .foregroundColor(.blue)
-                        .font(.title)
-                    .multilineTextAlignment(.leading)
-                        .padding()
-                        //.border(Color.blue, width: 5)
-                        .frame(width: 300, height: 60)
+                List {
+                ForEach(taskList) { event in
+                       EventView(event: event)
+                    }
                 }
             }
-            //TODO: Make the above VStack scrollable...maybe through a List?
+            
             Divider()
             Spacer() //I think this is how to keep the button at the bottom
             Divider()
-            NavigationLink(destination: ScheduleDayAddActivity()) {
+            NavigationLink(destination: ScheduleDayAddActivity(savedDay: selectedDate)) {
 //            Button(action: {
 //                let key: String = "Add activity button pressed"
 //                print(key)
@@ -131,7 +72,9 @@ struct ScheduleDayView: View {
                 .frame(width: 300, height: 60)
             }
         }
+        .onAppear(perform: readSchedule)
     }
+
 }
 
 struct ScheduleDayView_Previews: PreviewProvider {

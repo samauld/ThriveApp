@@ -21,6 +21,8 @@ struct ScheduleDayAddActivity: View {
     @State private var id: Int = 0;
     @State private var user = Auth.auth().currentUser;
     let db = Firestore.firestore()
+    var savedDay: String
+
 
     @State var taskList: [ActivityTask] = []
     
@@ -75,7 +77,7 @@ struct ScheduleDayAddActivity: View {
             taskArr.append(task.title)
         }
         
-        db.collection("schedules").document(user?.uid ?? "" ).collection(collDay)
+        db.collection("schedules").document(user?.uid ?? "" ).collection(self.savedDay)
             .addDocument(data: [ "USER": "me", "EDITED": time, "TITLE": title, "TASKS": taskArr]
                 ) { err in
                     if let err = err {
@@ -92,6 +94,6 @@ struct ScheduleDayAddActivity: View {
 
 struct ScheduleDayAddActivity_Previews: PreviewProvider {
     static var previews: some View {
-        ScheduleDayAddActivity()
+        ScheduleDayAddActivity(savedDay: "January 1, 2020")
     }
 }

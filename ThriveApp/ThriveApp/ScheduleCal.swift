@@ -23,6 +23,7 @@ struct ScheduleCal : View {
     
     var body: some View {
         VStack (spacing: 25) {
+            if !dateRetrieved {
             Image("scheduler").resizable()
             .frame(width: 200, height: 200)
                 .offset(x: 10, y: -30)
@@ -34,10 +35,10 @@ struct ScheduleCal : View {
             .font(.title)
             .padding()
             .border(Color.blue, width: 5)
-            }.sheet(isPresented: self.$dateRetrieved){
-                    
-                ScheduleDayView(selectedDate: self.pickedDate)
-                  
+            }
+            }
+            else {
+                ScheduleDayView(selectedDate: pickedDate)
             }
         }.onAppear(perform: startUp)
             .navigationViewStyle(StackNavigationViewStyle())
