@@ -12,19 +12,22 @@ struct EventView: View {
    
     /// post
     let event: Event
+    @State var detailView: Bool = false
     
     /// body
     var body: some View {
         VStack() {
-            Button(action: {}) {
-                Text(event.title ?? "")
-                    .foregroundColor(.blue)
-                    .font(.title)
-                .multilineTextAlignment(.leading)
-                    .padding()
-                    .frame(width: 300, height: 60)
-            }
-            Divider()
+           
+                NavigationLink(destination: TaskListView(event: event)) {
+                    Text(event.title ?? "")
+                        .foregroundColor(.blue)
+                        .font(.title)
+                    .multilineTextAlignment(.leading)
+                        .padding()
+                        .frame(width: 300, height: 60)
+                }
+            
+            
         }
     }
 }

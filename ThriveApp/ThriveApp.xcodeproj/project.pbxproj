@@ -20,6 +20,8 @@
 		79430EAA243B6ED5009ED9BF /* RKMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79430EA5243B6ED4009ED9BF /* RKMonth.swift */; };
 		7964A9BC24491A3D00A00A03 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7964A9BB24491A3D00A00A03 /* Event.swift */; };
 		7964A9BE24491C9200A00A03 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7964A9BD24491C9200A00A03 /* EventView.swift */; };
+		7964A9C0244920B300A00A03 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7964A9BF244920B300A00A03 /* TaskListView.swift */; };
+		7964A9C2244926D800A00A03 /* ScheduleDayEditActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7964A9C1244926D800A00A03 /* ScheduleDayEditActivity.swift */; };
 		7971B0D523FA11AC0018201F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971B0D423FA11AC0018201F /* SignUpView.swift */; };
 		7971B0D723FA13A60018201F /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971B0D623FA13A60018201F /* SignInView.swift */; };
 		7971B0D9240434260018201F /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971B0D8240434260018201F /* SignInController.swift */; };
@@ -69,6 +71,8 @@
 		79430EA5243B6ED4009ED9BF /* RKMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKMonth.swift; sourceTree = "<group>"; };
 		7964A9BB24491A3D00A00A03 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		7964A9BD24491C9200A00A03 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		7964A9BF244920B300A00A03 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
+		7964A9C1244926D800A00A03 /* ScheduleDayEditActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDayEditActivity.swift; sourceTree = "<group>"; };
 		7971B0D423FA11AC0018201F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		7971B0D623FA13A60018201F /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		7971B0D8240434260018201F /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
@@ -193,6 +197,8 @@
 				79430E97243AD855009ED9BF /* ScheduleCal.swift */,
 				7964A9BB24491A3D00A00A03 /* Event.swift */,
 				7964A9BD24491C9200A00A03 /* EventView.swift */,
+				7964A9BF244920B300A00A03 /* TaskListView.swift */,
+				7964A9C1244926D800A00A03 /* ScheduleDayEditActivity.swift */,
 			);
 			path = ThriveApp;
 			sourceTree = "<group>";
@@ -394,6 +400,7 @@
 				79430E9E243B6EAE009ED9BF /* RKManager.swift in Sources */,
 				A1DE6F51240CC10000196CD9 /* ChildProfileView.swift in Sources */,
 				7977ACBE23E4EBEB005C841D /* AppDelegate.swift in Sources */,
+				7964A9C0244920B300A00A03 /* TaskListView.swift in Sources */,
 				79430E98243AD855009ED9BF /* ScheduleCal.swift in Sources */,
 				761CDAC924305BBA0057A736 /* ToolboxView.swift in Sources */,
 				7972A502243218F400AD7869 /* Post.swift in Sources */,
@@ -401,6 +408,7 @@
 				763D6C6D2444062D00B226F7 /* ToolboxAdd.swift in Sources */,
 				7964A9BC24491A3D00A00A03 /* Event.swift in Sources */,
 				797324972428357E00F7F36A /* ParentCommunicationPortal.swift in Sources */,
+				7964A9C2244926D800A00A03 /* ScheduleDayEditActivity.swift in Sources */,
 				7973249B242912A100F7F36A /* ScheduleView.swift in Sources */,
 				797324992429124000F7F36A /* ScheduleDayView.swift in Sources */,
 				7971B0D9240434260018201F /* SignInController.swift in Sources */,

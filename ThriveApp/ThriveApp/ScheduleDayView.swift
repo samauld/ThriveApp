@@ -18,6 +18,7 @@ struct ScheduleDayView: View {
     @State var taskList =  [Event]()
     
     func readSchedule() {
+        taskList = [Event]()
         let docRef = db.collection("schedules").document(user?.uid ?? "");
 
         docRef.getDocument { (document, error) in
@@ -28,7 +29,7 @@ struct ScheduleDayView: View {
                     print("Error getting documents: \(err)")
                 } else {
                     for document in querySnapshot!.documents {
-                        self.taskList.append(Event(tasks: document.data()["TASKS"] as! [String], title: document.data()["TITLE"] as! String))
+                        self.taskList.append(Event(tasks: document.data()["TASKS"] as! [String], title: document.data()["TITLE"] as! String, id: document.documentID, date: self.selectedDate))
                         print(document.data())
                     }
                 }
