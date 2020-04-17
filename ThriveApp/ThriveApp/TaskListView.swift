@@ -14,6 +14,8 @@ struct TaskListView: View {
     @State var event: Event
     @State private var user = Auth.auth().currentUser;
     let db = Firestore.firestore()
+    @Environment(\.presentationMode) var presentationMode
+
     
     func resetTask() {
         let docRef = db.collection("schedules").document(user?.uid ?? "");
@@ -38,6 +40,19 @@ struct TaskListView: View {
             }
         }
         
+    }
+    
+    func removeTask(){
+        db.collection("schedules").document(user?.uid ?? "").collection(self.event.date ?? "").document(self.event.id).delete(){ err in
+            if let err = err {
+                print("Error removing document: \(err)")
+            } else {
+                print("Document successfully removed!")
+            }
+        }
+        
+        self.presentationMode.wrappedValue.dismiss()
+
     }
     
     var body: some View {
@@ -67,7 +82,7 @@ struct TaskListView: View {
                     //.border(Color.blue, width: 5)
                     .frame(width: 300, height: 60)
                 }
-            Button(action: {}) {
+            Button(action: {self.removeTask()}) {
                     Text("Remove")
                     .foregroundColor(.blue)
                     .font(.title)
