@@ -14,13 +14,20 @@ struct ScheduleDayEditActivity: View {
     @State private var title: String = ""
     @State private var newTask: String = ""
     @State private var id: Int = 0;
+    @State private var start = Date()
+    @State private var end = Date()
     @State private var user = Auth.auth().currentUser;
     let db = Firestore.firestore()
     @State var event: Event
     @State var editedTask: Bool = false
     @Environment(\.presentationMode) var presentationMode
-
+        
+    func createDatePickers(){
+        start = self.event.start
+        end = self.event.end ?? Date()
+    }
     
+
     var body: some View {
         Form{
                 Section(header: Text("Activity Title")) {
@@ -36,11 +43,17 @@ struct ScheduleDayEditActivity: View {
                     TextField("New task title", text: $newTask)
                     Button(action: addTask, label: { Text("Add task") })
                 }
+                Section(header: Text("Activity Times")){
+                  
+                    DatePicker("Start time", selection: $start, displayedComponents: .hourAndMinute)
+                    DatePicker("End time", selection: $end, displayedComponents: .hourAndMinute)
+
+                }
                 Button(action: writeActivity) {
                     Text("Save changes")
                 }
             .navigationBarTitle("Add New Activity")
-        }
+        }.onAppear(perform: createDatePickers)
     }
     func addTask() {
         if newTask != "" {
@@ -76,7 +89,7 @@ struct ScheduleDayEditActivity: View {
 //        }
         
         db.collection("schedules").document(user?.uid ?? "" ).collection(event.date ?? "").document(event.id)
-            .setData([ "USER": "me", "EDITED": time, "TITLE": event.title, "TASKS": event.tasks]
+            .setData([ "USER": "me", "EDITED": time, "TITLE": event.title, "TASKS": event.tasks, "START": start, "END": end]
                 ) { err in
                     if let err = err {
                         print("Error adding document: \(err)")
@@ -89,10 +102,11 @@ struct ScheduleDayEditActivity: View {
         //id = 0
         self.presentationMode.wrappedValue.dismiss()
     }
+    
 }
 
 struct ScheduleDayEditActivity_Previews: PreviewProvider {
     static var previews: some View {
-        ScheduleDayEditActivity(event: Event(tasks: [""], title: "", id: "", date: ""))
+        ScheduleDayEditActivity(event: Event(tasks: [""], title: "", id: "", date: "", start: Date(), end: Date()))
     }
 }

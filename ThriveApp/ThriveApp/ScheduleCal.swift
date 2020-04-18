@@ -65,7 +65,8 @@ struct ScheduleCal : View {
         let formatter = DateFormatter()
         formatter.locale = .current
         formatter.dateFormat = "EEEE, MMMM d, yyyy"
-        pickedDate = date == nil ? "" : formatter.string(from: date)
+        self.pickedDate = date == nil ? "" : formatter.string(from: date)
+        print(self.pickedDate)
         self.dateRetrieved = true
         return date == nil ? "" : formatter.string(from: date)
     }

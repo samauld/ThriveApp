@@ -9,12 +9,16 @@ struct Event: Identifiable {
     var tasks = [String]()
     var title: String?
     var date: String?
+    var start: Date
+    var end: Date?
     
     /// Init
-    init(tasks: [String], title: String, id: String, date: String) {
+    init(tasks: [String], title: String, id: String, date: String, start: Date, end: Date) {
         self.tasks = tasks
         self.title = title
         self.id = id
         self.date = date
+        self.start = start
+        self.end = end
     }
 }

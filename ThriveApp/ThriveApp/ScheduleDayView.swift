@@ -19,25 +19,22 @@ struct ScheduleDayView: View {
     
     func readSchedule() {
         taskList = [Event]()
-        let docRef = db.collection("schedules").document(user?.uid ?? "");
+        print(user?.uid ?? "")
+        print(self.selectedDate)
 
-        docRef.getDocument { (document, error) in
-        if let document = document {
-            //if document.exists{
-            docRef.collection(self.selectedDate).getDocuments() { (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        self.taskList.append(Event(tasks: document.data()["TASKS"] as! [String], title: document.data()["TITLE"] as! String, id: document.documentID, date: self.selectedDate))
-                        print(document.data())
-                    }
-                }
+        db.collection("schedules").document(user?.uid ?? "").collection(self.selectedDate).getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    self.taskList.append(Event(tasks: document.data()["TASKS"] as! [String], title: document.data()["TITLE"] as! String, id: document.documentID, date: self.selectedDate, start: (document.data()["START"] as! Timestamp).dateValue(), end: (document.data()["END"] as! Timestamp).dateValue()))
+                    print(document.data())
                 }
             }
-            else {
-                print("Document does not exist")
-            }
+                
+                }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.taskList = self.taskList.sorted { $0.start < $1.start }
         }
     }
         
@@ -47,7 +44,6 @@ struct ScheduleDayView: View {
                 .font(.title)
                 .padding()
             Divider()
-            //Spacer()
             VStack {
                 List {
                 ForEach(taskList) { event in
@@ -57,13 +53,9 @@ struct ScheduleDayView: View {
             }
             
             Divider()
-            Spacer() //I think this is how to keep the button at the bottom
+            Spacer()
             Divider()
             NavigationLink(destination: ScheduleDayAddActivity(savedDay: selectedDate)) {
-//            Button(action: {
-//                let key: String = "Add activity button pressed"
-//                print(key)
-//            }) {
                 Text("+ Add Activity")
                 .foregroundColor(.blue)
                 .font(.title)

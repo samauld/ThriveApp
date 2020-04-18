@@ -29,7 +29,7 @@ struct TaskListView: View {
                     print("Error getting documents: \(err)")
                 } else {
                     if let document = document {
-                        self.event = Event(tasks: document.data()?["TASKS"] as! [String], title: document.data()?["TITLE"] as! String, id: document.documentID, date: date ?? "")
+                        self.event = Event(tasks: document.data()?["TASKS"] as! [String], title: document.data()?["TITLE"] as! String, id: document.documentID, date: date ?? "", start: (document.data()?["START"] as! Timestamp).dateValue(), end: (document.data()?["END"] as! Timestamp).dateValue())
                     }
                     
                 }
@@ -97,6 +97,6 @@ struct TaskListView: View {
 
 struct TaskListView_Previews: PreviewProvider {
     static var previews: some View {
-        TaskListView(event: Event(tasks: [""], title: "", id:"", date: ""))
+        TaskListView(event: Event(tasks: [""], title: "", id:"", date: "", start: Date(), end: Date()))
     }
 }

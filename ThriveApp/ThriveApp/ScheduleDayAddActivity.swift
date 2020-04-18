@@ -19,9 +19,12 @@ struct ScheduleDayAddActivity: View {
     @State private var title: String = ""
     @State private var newTask: String = ""
     @State private var id: Int = 0;
+    @State private var start = Date()
+    @State private var end = Date()
     @State private var user = Auth.auth().currentUser;
     let db = Firestore.firestore()
     var savedDay: String
+
 
 
     @State var taskList: [ActivityTask] = []
@@ -40,6 +43,11 @@ struct ScheduleDayAddActivity: View {
                     }
                     TextField("New task title", text: $newTask)
                     Button(action: addTask, label: { Text("Add task") })
+                }
+                Section(header: Text("Activity Times")){
+                    DatePicker("Start time", selection: $start, displayedComponents: .hourAndMinute)
+                    DatePicker("End time", selection: $end, displayedComponents: .hourAndMinute)
+
                 }
                 Button(action: writeActivity) {
                     Text("Save changes")
@@ -78,7 +86,7 @@ struct ScheduleDayAddActivity: View {
         }
         
         db.collection("schedules").document(user?.uid ?? "" ).collection(self.savedDay)
-            .addDocument(data: [ "USER": "me", "EDITED": time, "TITLE": title, "TASKS": taskArr]
+            .addDocument(data: [ "USER": "me", "EDITED": time, "TITLE": title, "TASKS": taskArr, "START": start, "END": end]
                 ) { err in
                     if let err = err {
                         print("Error adding document: \(err)")
