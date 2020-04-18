@@ -7,17 +7,31 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import Firebase
 
 struct ChildProfileView: View {
+    
+    func signOut(){
+        let firebaseAuth = Auth.auth();
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        
+    }
+    
+    
     var body: some View {
         VStack {
             HStack(spacing: 50) {
                 
                 VStack {
                     
-                Image("commportal").resizable()
-                    .frame(width: 130.0, height: 130.0)
-                    .clipShape(Rectangle())
+                    Image("commportal").resizable()
+                        .frame(width: 130.0, height: 130.0)
+                        .clipShape(Rectangle())
                     NavigationLink(destination: ParentCommunicationPortal()) {
                         Text("Messages")
                     }
@@ -27,8 +41,8 @@ struct ChildProfileView: View {
                 VStack {
                     
                     Image("notification").resizable()
-                    .frame(width: 130.0, height: 130.0)
-                    .clipShape(Rectangle())
+                        .frame(width: 130.0, height: 130.0)
+                        .clipShape(Rectangle())
                     Button(action: {}) {
                         Text("Notifications")
                     }
@@ -39,8 +53,8 @@ struct ChildProfileView: View {
                 VStack {
                     
                     Image("scheduler").resizable()
-                    .frame(width: 135.0, height: 135.0)
-                    .clipShape(Rectangle())
+                        .frame(width: 135.0, height: 135.0)
+                        .clipShape(Rectangle())
                     NavigationLink(destination: ScheduleCal()) {
                         Text("Schedule")
                     }
@@ -48,8 +62,8 @@ struct ChildProfileView: View {
                 VStack {
                     
                     Image("toolbox").resizable()
-                    .frame(width: 130.0, height: 130.0)
-                    .clipShape(Rectangle())
+                        .frame(width: 130.0, height: 130.0)
+                        .clipShape(Rectangle())
                     NavigationLink(destination: ToolboxView()) {
                         Text("Regulation Toolbox")
                     }
@@ -60,8 +74,8 @@ struct ChildProfileView: View {
                 VStack {
                     
                     Image("rewardsbank").resizable()
-                    .frame(width: 130.0, height: 130.0)
-                    .clipShape(Rectangle())
+                        .frame(width: 130.0, height: 130.0)
+                        .clipShape(Rectangle())
                     NavigationLink(destination: RewardBankView()) {
                         Text("Reward Bank")
                     }
@@ -69,8 +83,8 @@ struct ChildProfileView: View {
                 VStack {
                     
                     Image("geofence").resizable()
-                    .frame(width: 130.0, height: 130.0)
-                    .clipShape(Rectangle())
+                        .frame(width: 130.0, height: 130.0)
+                        .clipShape(Rectangle())
                     Button(action: {}) {
                         Text("Geofences")
                     }
@@ -78,12 +92,12 @@ struct ChildProfileView: View {
             }
             .padding(.top)
             Spacer()
-            Button(action: {signOut()}) {
+            Button(action: {self.signOut()}) {
                 Text("Sign Out")
-                .foregroundColor(.blue)
-                .font(.title)
-                .padding()
-                .border(Color.blue, width: 5)
+                    .foregroundColor(.blue)
+                    .font(.title)
+                    .padding()
+                    .border(Color.blue, width: 5)
             }
             .navigationBarTitle(Text("Adam's Profile"), displayMode: .inline)
         }

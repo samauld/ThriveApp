@@ -14,7 +14,7 @@ struct ToolboxView: View {
     @State private var user = Auth.auth().currentUser
     @State private var heartRate: Double = 70
     let db = Firestore.firestore()
-
+    
     
     func readTools() {
         db.collection("users").getDocuments() { (querySnapshot, err) in
@@ -34,12 +34,10 @@ struct ToolboxView: View {
                 List{
                     HStack {
                         Image("toolbox").resizable()
-                        .frame(width: 50, height: 50)
-                    NavigationLink(destination:ToolDetailView()){
+                            .frame(width: 50, height: 50)
+                        NavigationLink(destination:ToolDetailView()){
                             Text("Blow Bubbles")
                         }.multilineTextAlignment(.leading)
-                        //Have some sort of indication for what tool is active
-                        //Image("notification").resizable().frame(width: 50, height: 50)
                     }
                 }
                 Button(action: {self.readTools()}) {
@@ -51,11 +49,11 @@ struct ToolboxView: View {
                     Text("\(heartRate, specifier: "%.0f")")
                 }.padding()
                 NavigationLink(destination: ToolboxAdd()){
-                   Text("+ Add Regulation Tool")
-                    .foregroundColor(.blue)
-                    .font(.title)
-                    .padding()
-                    .border(Color.blue, width: 4)
+                    Text("+ Add Regulation Tool")
+                        .foregroundColor(.blue)
+                        .font(.title)
+                        .padding()
+                        .border(Color.blue, width: 4)
                 }
                 .padding(.top)
             }

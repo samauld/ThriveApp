@@ -15,7 +15,7 @@ struct SignInView: View {
     @State private var username: String = ""
     @State private var password: String = ""
     @State var signInAuthorized: Bool = false
-
+    
     func signInAuthentication(email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
             self.signInAuthorized = true
@@ -36,10 +36,10 @@ struct SignInView: View {
                     .frame(width: 300)
                 Button(action: {self.signInAuthentication(email: self.username, password: self.password)}) {
                     Text("Sign In")
-                    .foregroundColor(.blue)
-                    .font(.title)
-                    .padding()
-                    .border(Color.blue, width: 5)
+                        .foregroundColor(.blue)
+                        .font(.title)
+                        .padding()
+                        .border(Color.blue, width: 5)
                     
                 }
             }
@@ -47,7 +47,7 @@ struct SignInView: View {
                 ChildProfileView()
             }
             
-            }
+        }
         
     }
 }

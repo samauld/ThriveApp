@@ -17,22 +17,22 @@ struct RewardBankView: View {
     
     func readTokens(){
         var docRef = db.collection("rewards").document(user?.uid ?? "");
-
+        
         docRef.getDocument { (document, error) in
-        if let document = document {
-            if document.exists{
-                self.count=document.data()?["tokens"] as! Int
+            if let document = document {
+                if document.exists{
+                    self.count=document.data()?["tokens"] as! Int
+                }
+                else {
+                    print("Document does not exist")
+                }
             }
-            else {
-                print("Document does not exist")
-            }
-        }
         }
     }
     
     func writeTokens(){
         db.collection("rewards").document(user?.uid ?? "" ).setData(["tokens": self.count])
-         { err in
+        { err in
             if let err = err {
                 print("Error adding document: \(err)")
             } else {

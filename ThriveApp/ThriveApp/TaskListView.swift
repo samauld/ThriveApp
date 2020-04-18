@@ -15,24 +15,23 @@ struct TaskListView: View {
     @State private var user = Auth.auth().currentUser;
     let db = Firestore.firestore()
     @Environment(\.presentationMode) var presentationMode
-
+    
     
     func resetTask() {
         let docRef = db.collection("schedules").document(user?.uid ?? "");
         let date = event.date
-
+        
         docRef.getDocument { (document, error) in
-        if let document = document {
-            //if document.exists{
-            docRef.collection(self.event.date ?? "").document(self.event.id).getDocument{ (document, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    if let document = document {
-                        self.event = Event(tasks: document.data()?["TASKS"] as! [String], title: document.data()?["TITLE"] as! String, id: document.documentID, date: date ?? "", start: (document.data()?["START"] as! Timestamp).dateValue(), end: (document.data()?["END"] as! Timestamp).dateValue())
+            if let document = document {
+                docRef.collection(self.event.date ?? "").document(self.event.id).getDocument{ (document, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        if let document = document {
+                            self.event = Event(tasks: document.data()?["TASKS"] as! [String], title: document.data()?["TITLE"] as! String, id: document.documentID, date: date ?? "", start: (document.data()?["START"] as! Timestamp).dateValue(), end: (document.data()?["END"] as! Timestamp).dateValue())
+                        }
+                        
                     }
-                    
-                }
                 }
             }
             else {
@@ -52,48 +51,46 @@ struct TaskListView: View {
         }
         
         self.presentationMode.wrappedValue.dismiss()
-
+        
     }
     
     var body: some View {
         VStack{
             Text("\(event.title ?? "")")
                 .font(.largeTitle)
-                    .padding()
-                Divider()
-                VStack {
-                    Text("Tasks").font(.title)
-                    List {
-                        ForEach(event.tasks, id: \.self) { task in
-                           Text("\(task)")
-                        }
+                .padding()
+            Divider()
+            VStack {
+                Text("Tasks").font(.title)
+                List {
+                    ForEach(event.tasks, id: \.self) { task in
+                        Text("\(task)")
                     }
                 }
-                
-                Divider()
-                Spacer() //I think this is how to keep the button at the bottom
-                Divider()
+            }
+            
+            Divider()
+            Spacer()
+            Divider()
             NavigationLink(destination: ScheduleDayEditActivity(event: event)) {
-                    Text("Edit")
+                Text("Edit")
                     .foregroundColor(.blue)
                     .font(.title)
                     .multilineTextAlignment(.leading)
                     .padding()
-                    //.border(Color.blue, width: 5)
                     .frame(width: 300, height: 60)
-                }
+            }
             Button(action: {self.removeTask()}) {
-                    Text("Remove")
+                Text("Remove")
                     .foregroundColor(.blue)
                     .font(.title)
                     .multilineTextAlignment(.leading)
                     .padding()
-                    //.border(Color.blue, width: 5)
                     .frame(width: 300, height: 60)
             }
         }.onAppear(perform: resetTask)
     }
-    }
+}
 
 struct TaskListView_Previews: PreviewProvider {
     static var previews: some View {

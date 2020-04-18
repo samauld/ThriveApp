@@ -24,34 +24,32 @@ struct ScheduleDayAddActivity: View {
     @State private var user = Auth.auth().currentUser;
     let db = Firestore.firestore()
     var savedDay: String
-
-
-
+    
     @State var taskList: [ActivityTask] = []
     
     var body: some View {
-            Form {
-                Section(header: Text("Activity Title")) {
-                    TextField("Activity title", text: $title)
-                }
-                Section(header: Text("Activity Tasks")) {
-                    List() {
-                        ForEach(taskList) { task in
-                            Text(task.title)
-                        }
-                        .onDelete(perform: delete)
+        Form {
+            Section(header: Text("Activity Title")) {
+                TextField("Activity title", text: $title)
+            }
+            Section(header: Text("Activity Tasks")) {
+                List() {
+                    ForEach(taskList) { task in
+                        Text(task.title)
                     }
-                    TextField("New task title", text: $newTask)
-                    Button(action: addTask, label: { Text("Add task") })
+                    .onDelete(perform: delete)
                 }
-                Section(header: Text("Activity Times")){
-                    DatePicker("Start time", selection: $start, displayedComponents: .hourAndMinute)
-                    DatePicker("End time", selection: $end, displayedComponents: .hourAndMinute)
-
-                }
-                Button(action: writeActivity) {
-                    Text("Save changes")
-                }
+                TextField("New task title", text: $newTask)
+                Button(action: addTask, label: { Text("Add task") })
+            }
+            Section(header: Text("Activity Times")){
+                DatePicker("Start time", selection: $start, displayedComponents: .hourAndMinute)
+                DatePicker("End time", selection: $end, displayedComponents: .hourAndMinute)
+                
+            }
+            Button(action: writeActivity) {
+                Text("Save changes")
+            }
             .navigationBarTitle("Add New Activity")
         }
     }
@@ -78,7 +76,6 @@ struct ScheduleDayAddActivity: View {
         let year = calendar.component(.year, from: date)
         
         let time = "\(month)/\(day)/\(year) \(hour):\(minutes)"
-        let collDay = "\(month).\(day).\(year)"
         
         var taskArr: [String] = [];
         for task in taskList {
@@ -87,13 +84,13 @@ struct ScheduleDayAddActivity: View {
         
         db.collection("schedules").document(user?.uid ?? "" ).collection(self.savedDay)
             .addDocument(data: [ "USER": "me", "EDITED": time, "TITLE": title, "TASKS": taskArr, "START": start, "END": end]
-                ) { err in
-                    if let err = err {
-                        print("Error adding document: \(err)")
-                    } else {
-                        print("Document added")
-                    }
+            ) { err in
+                if let err = err {
+                    print("Error adding document: \(err)")
+                } else {
+                    print("Document added")
                 }
+        }
         title = ""
         taskList = []
         id = 0

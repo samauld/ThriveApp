@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct EventView: View {
-   
+    
     let event: Event
     @State var detailView: Bool = false
     
@@ -20,24 +20,23 @@ struct EventView: View {
         print(formatter.string(from: date))
         return date == nil ? "" : formatter.string(from: date)
     }
-
     
-    /// body
+    
     var body: some View {
         VStack() {
-           
-                NavigationLink(destination: TaskListView(event: event)) {
-                    Text("\(getTextFromDate(date:event.start)) ").font(.subheadline)
-                    Text("-").font(.subheadline)
-                    Text(" \(getTextFromDate(date:event.end))").font(.subheadline)
-                    
-                    Text(event.title ?? "")
-                        .foregroundColor(.blue)
-                        .font(.title)
+            
+            NavigationLink(destination: TaskListView(event: event)) {
+                Text("\(getTextFromDate(date:event.start)) ").font(.subheadline)
+                Text("-").font(.subheadline)
+                Text(" \(getTextFromDate(date:event.end))").font(.subheadline)
+                
+                Text(event.title ?? "")
+                    .foregroundColor(.blue)
+                    .font(.title)
                     .multilineTextAlignment(.leading)
-                        .padding()
-                        .frame(width: 225, height: 60)
-                }
+                    .padding()
+                    .frame(width: 225, height: 60)
+            }
             
             
         }

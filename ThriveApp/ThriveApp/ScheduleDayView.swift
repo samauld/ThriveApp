@@ -61,7 +61,6 @@ struct ScheduleDayView: View {
                 .font(.title)
                 .multilineTextAlignment(.leading)
                 .padding()
-                //.border(Color.blue, width: 5)
                 .frame(width: 300, height: 60)
             }
         }

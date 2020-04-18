@@ -17,25 +17,23 @@ struct ScheduleCal : View {
     @State var pickedDate = ""
     @State var dateRetrieved = false;
     
-
-    
     var rkManager1 = RKManager(calendar: Calendar.current, minimumDate: Date(), maximumDate: Date().addingTimeInterval(60*60*24*365), mode: 0)
     
     var body: some View {
         VStack (spacing: 25) {
             if !dateRetrieved {
-            Image("scheduler").resizable()
-            .frame(width: 200, height: 200)
-                .offset(x: 10, y: -30)
-            Text("Adam's Schedule").font(.largeTitle)
-            RKViewController(isPresented: self.$singleIsPresented, rkManager: self.rkManager1)
-            Button(action: {self.getTextFromDate(date: self.rkManager1.selectedDate)}) {
+                Image("scheduler").resizable()
+                    .frame(width: 200, height: 200)
+                    .offset(x: 10, y: -30)
+                Text("Adam's Schedule").font(.largeTitle)
+                RKViewController(isPresented: self.$singleIsPresented, rkManager: self.rkManager1)
+                Button(action: {self.getTextFromDate(date: self.rkManager1.selectedDate)}) {
                     Text("Edit")
-            .foregroundColor(.blue)
-            .font(.title)
-            .padding()
-            .border(Color.blue, width: 5)
-            }
+                        .foregroundColor(.blue)
+                        .font(.title)
+                        .padding()
+                        .border(Color.blue, width: 5)
+                }
             }
             else {
                 ScheduleDayView(selectedDate: pickedDate)
@@ -54,9 +52,8 @@ struct ScheduleCal : View {
             }
         }.padding(.horizontal, 15)
     }
- 
+    
     func startUp() {
-        let testOnDates = [Date().addingTimeInterval(60*60*24), Date().addingTimeInterval(60*60*24*2)]
         rkManager1.colors.monthHeaderColor = Color.blue
         rkManager1.colors.weekdayHeaderColor = Color.blue
     }
@@ -66,11 +63,10 @@ struct ScheduleCal : View {
         formatter.locale = .current
         formatter.dateFormat = "EEEE, MMMM d, yyyy"
         self.pickedDate = date == nil ? "" : formatter.string(from: date)
-        print(self.pickedDate)
         self.dateRetrieved = true
         return date == nil ? "" : formatter.string(from: date)
     }
-
+    
 }
 
 

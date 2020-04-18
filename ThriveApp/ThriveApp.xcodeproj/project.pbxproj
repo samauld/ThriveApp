@@ -24,12 +24,10 @@
 		7964A9C2244926D800A00A03 /* ScheduleDayEditActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7964A9C1244926D800A00A03 /* ScheduleDayEditActivity.swift */; };
 		7971B0D523FA11AC0018201F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971B0D423FA11AC0018201F /* SignUpView.swift */; };
 		7971B0D723FA13A60018201F /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971B0D623FA13A60018201F /* SignInView.swift */; };
-		7971B0D9240434260018201F /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971B0D8240434260018201F /* SignInController.swift */; };
 		7972A500243218AA00AD7869 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7972A4FF243218AA00AD7869 /* PostView.swift */; };
 		7972A502243218F400AD7869 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7972A501243218F400AD7869 /* Post.swift */; };
 		797324972428357E00F7F36A /* ParentCommunicationPortal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797324962428357D00F7F36A /* ParentCommunicationPortal.swift */; };
 		797324992429124000F7F36A /* ScheduleDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797324982429124000F7F36A /* ScheduleDayView.swift */; };
-		7973249B242912A100F7F36A /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7973249A242912A100F7F36A /* ScheduleView.swift */; };
 		7977ACBE23E4EBEB005C841D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7977ACBD23E4EBEB005C841D /* AppDelegate.swift */; };
 		7977ACC023E4EBEB005C841D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7977ACBF23E4EBEB005C841D /* SceneDelegate.swift */; };
 		7977ACC223E4EBEB005C841D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7977ACC123E4EBEB005C841D /* ContentView.swift */; };
@@ -75,12 +73,10 @@
 		7964A9C1244926D800A00A03 /* ScheduleDayEditActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDayEditActivity.swift; sourceTree = "<group>"; };
 		7971B0D423FA11AC0018201F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		7971B0D623FA13A60018201F /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		7971B0D8240434260018201F /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		7972A4FF243218AA00AD7869 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		7972A501243218F400AD7869 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		797324962428357D00F7F36A /* ParentCommunicationPortal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentCommunicationPortal.swift; sourceTree = "<group>"; };
 		797324982429124000F7F36A /* ScheduleDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDayView.swift; sourceTree = "<group>"; };
-		7973249A242912A100F7F36A /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		7977ACBA23E4EBEB005C841D /* ThriveApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThriveApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7977ACBD23E4EBEB005C841D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7977ACBF23E4EBEB005C841D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -178,13 +174,11 @@
 				79430EA2243B6ED4009ED9BF /* RKWeekdayHeader.swift */,
 				79430E9F243B6EC9009ED9BF /* RKViewController.swift */,
 				79430E9D243B6EAE009ED9BF /* RKManager.swift */,
-				7973249A242912A100F7F36A /* ScheduleView.swift */,
 				7977ACCB23E4EBEC005C841D /* Info.plist */,
 				7977ACDF23E4EC8B005C841D /* GoogleService-Info.plist */,
 				7977ACC523E4EBEC005C841D /* Preview Content */,
 				7971B0D423FA11AC0018201F /* SignUpView.swift */,
 				7971B0D623FA13A60018201F /* SignInView.swift */,
-				7971B0D8240434260018201F /* SignInController.swift */,
 				A1DE6F50240CC10000196CD9 /* ChildProfileView.swift */,
 				797324962428357D00F7F36A /* ParentCommunicationPortal.swift */,
 				7972A4FF243218AA00AD7869 /* PostView.swift */,
@@ -409,9 +403,7 @@
 				7964A9BC24491A3D00A00A03 /* Event.swift in Sources */,
 				797324972428357E00F7F36A /* ParentCommunicationPortal.swift in Sources */,
 				7964A9C2244926D800A00A03 /* ScheduleDayEditActivity.swift in Sources */,
-				7973249B242912A100F7F36A /* ScheduleView.swift in Sources */,
 				797324992429124000F7F36A /* ScheduleDayView.swift in Sources */,
-				7971B0D9240434260018201F /* SignInController.swift in Sources */,
 				79430EAA243B6ED5009ED9BF /* RKMonth.swift in Sources */,
 				79430EA8243B6ED5009ED9BF /* RKColorSettings.swift in Sources */,
 				7977ACC223E4EBEB005C841D /* ContentView.swift in Sources */,

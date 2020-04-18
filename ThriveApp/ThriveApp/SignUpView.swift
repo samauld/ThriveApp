@@ -21,7 +21,7 @@ struct SignUpView: View {
             self.signUpAuthenticated = true
         }
     }
-
+    
     var body: some View {
         VStack{
             if !signUpAuthenticated{
@@ -36,10 +36,10 @@ struct SignUpView: View {
                     .frame(width: 300)
                 Button(action: {self.signUpAuthentication(email: self.email, password: self.password)}) {
                     Text("Create account")
-                    .foregroundColor(.blue)
-                    .font(.title)
-                    .padding()
-                    .border(Color.blue, width: 5)
+                        .foregroundColor(.blue)
+                        .font(.title)
+                        .padding()
+                        .border(Color.blue, width: 5)
                 }
             }
             else {
