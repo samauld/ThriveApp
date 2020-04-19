@@ -29,8 +29,15 @@ struct ToolboxAdd: View {
     
     func writeTool() {
         if title != "" {
-            print("tool added")
-            db.collection("regulation-tasks").addDocument(data: [ "USER": "me", "TOOL": title, "CHILD": "childName"])
+            db.collection("regulation-tasks").document(user?.uid ?? "").collection("tools").addDocument(data: [ "TOOL": title]
+            ) { err in
+                if let err = err {
+                    print("Error adding tool: \(err)")
+                } else {
+                    print("Tool added")
+                }
+                
+            }
             title = ""
         }
     }
