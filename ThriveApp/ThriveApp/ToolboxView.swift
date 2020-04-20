@@ -14,17 +14,31 @@ struct ToolboxView: View {
     @State private var user = Auth.auth().currentUser
     @State private var heartRate: Double = 70
     let db = Firestore.firestore()
+    @State var tools = [String]()
     
     
     func readTools() {
-        db.collection("users").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
+        //print(Auth.auth().currentUser)
+        tools = [String]()
+        
+        let docRef = db.collection("regulation-tasks").document(user?.uid ?? "")
+        
+        docRef.getDocument { (document, err) in
+            if let document = document {
+                docRef.collection("tools").getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        for document in querySnapshot!.documents {
+                            self.tools.append(document.data()["TOOL"] as! String)
+                        }
+                    }
+                    
                 }
+            } else {
+                print("Document does not exist")
             }
+            
         }
     }
     
@@ -32,16 +46,15 @@ struct ToolboxView: View {
         NavigationView(){
             VStack{
                 List{
-                    HStack {
-                        Image("toolbox").resizable()
-                            .frame(width: 50, height: 50)
-                        NavigationLink(destination:ToolDetailView()){
-                            Text("Blow Bubbles")
-                        }.multilineTextAlignment(.leading)
+                    ForEach(tools, id: \.self) { tool in
+                        HStack {
+                            Image("toolbox").resizable()
+                                .frame(width: 50, height: 50)
+                            NavigationLink(destination:ToolDetailView()){
+                                Text(tool)
+                            }.multilineTextAlignment(.leading)
+                        }
                     }
-                }
-                Button(action: {self.readTools()}) {
-                    Text("debug")
                 }
                 HStack {
                     Text("Heartrate")
@@ -58,6 +71,7 @@ struct ToolboxView: View {
                 .padding(.top)
             }
             .navigationBarTitle(Text("Child Name's Toolbox"))
+            .onAppear(perform: readTools)
         }
     }
 }
