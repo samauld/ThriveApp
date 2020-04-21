@@ -18,7 +18,9 @@ struct SignUpView: View {
     
     func signUpAuthentication(email: String, password: String) {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-            self.signUpAuthenticated = true
+            if (error == nil) {
+                self.signInAuthorized = true
+            }
         }
     }
     
