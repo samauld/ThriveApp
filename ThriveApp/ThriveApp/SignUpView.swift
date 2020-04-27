@@ -18,7 +18,9 @@ struct SignUpView: View {
     
     func signUpAuthentication(email: String, password: String) {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-            self.signUpAuthenticated = true
+            if (error == nil) {
+                self.signUpAuthenticated = true
+            }
         }
     }
     
@@ -31,7 +33,7 @@ struct SignUpView: View {
                 TextField("Email", text: $email)
                     .padding(.all)
                     .frame(width: 300)
-                SecureField("Password", text: $password)
+                SecureField("Password (must be 6 characters)", text: $password)
                     .padding(.all)
                     .frame(width: 300)
                 Button(action: {self.signUpAuthentication(email: self.email, password: self.password)}) {

@@ -18,7 +18,9 @@ struct SignInView: View {
     
     func signInAuthentication(email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-            self.signInAuthorized = true
+            if (error == nil) {
+                self.signInAuthorized = true
+            }
         }
     }
     
