@@ -16,6 +16,7 @@ struct RewardBankView: View {
     let db = Firestore.firestore()
     
     func readTokens(){
+        print(user?.email);
         var docRef = db.collection("rewards").document(user?.uid ?? "");
         
         docRef.getDocument { (document, error) in

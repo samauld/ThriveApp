@@ -36,10 +36,12 @@ struct SignUpView: View {
                     .frame(width: 300)
                 Button(action: {self.signUpAuthentication(email: self.email, password: self.password)}) {
                     Text("Create account")
-                        .foregroundColor(.blue)
+                        .foregroundColor(.white)
                         .font(.title)
+                        .frame(minWidth: 0, maxWidth: 200)
                         .padding()
-                        .border(Color.blue, width: 5)
+                        .background(LinearGradient(gradient: Gradient(colors: [Color("ThriveBlue"), Color(red: 3/255, green: 161/255, blue: 235/255)]), startPoint: .leading, endPoint: .trailing))
+                        .cornerRadius(40)
                 }
             }
             else {

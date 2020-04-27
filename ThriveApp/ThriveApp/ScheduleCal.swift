@@ -29,10 +29,12 @@ struct ScheduleCal : View {
                 RKViewController(isPresented: self.$singleIsPresented, rkManager: self.rkManager1)
                 Button(action: {self.getTextFromDate(date: self.rkManager1.selectedDate)}) {
                     Text("Edit")
-                        .foregroundColor(.blue)
+                        .foregroundColor(.white)
                         .font(.title)
+                        .frame(minWidth: 0, maxWidth: 100)
                         .padding()
-                        .border(Color.blue, width: 5)
+                        .background(LinearGradient(gradient: Gradient(colors: [Color("ThriveBlue"), Color(red: 3/255, green: 161/255, blue: 235/255)]), startPoint: .leading, endPoint: .trailing))
+                        .cornerRadius(40)
                 }
             }
             else {

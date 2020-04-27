@@ -43,7 +43,6 @@ struct ToolboxView: View {
     }
     
     var body: some View {
-        NavigationView(){
             VStack{
                 List{
                     ForEach(tools, id: \.self) { tool in
@@ -63,17 +62,19 @@ struct ToolboxView: View {
                 }.padding()
                 NavigationLink(destination: ToolboxAdd()){
                     Text("+ Add Regulation Tool")
-                        .foregroundColor(.blue)
+                        .foregroundColor(.white)
                         .font(.title)
+                        .frame(minWidth: 0, maxWidth: 300)
                         .padding()
-                        .border(Color.blue, width: 4)
+                        .background(LinearGradient(gradient: Gradient(colors: [Color("ThriveBlue"), Color(red: 3/255, green: 161/255, blue: 235/255)]), startPoint: .leading, endPoint: .trailing))
+                        .cornerRadius(40)
                 }
                 .padding(.top)
             }
             .navigationBarTitle(Text("Child Name's Toolbox"))
             .onAppear(perform: readTools)
         }
-    }
+    
 }
 
 struct ToolboxView_Previews: PreviewProvider {
